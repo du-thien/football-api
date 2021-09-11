@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leagues",
+  "info": {
+    "name": "league"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "leaqueId": {
+      "type": "integer",
+      "unique": true,
+      "private": true
+    },
+    "leagueName": {
+      "type": "string"
+    }
+  }
+}

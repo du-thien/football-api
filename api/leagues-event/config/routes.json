@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/leagues-events",
+      "handler": "leagues-event.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/leagues-events/count",
+      "handler": "leagues-event.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/leagues-events/:id",
+      "handler": "leagues-event.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/leagues-events",
+      "handler": "leagues-event.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/leagues-events/:id",
+      "handler": "leagues-event.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/leagues-events/:id",
+      "handler": "leagues-event.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

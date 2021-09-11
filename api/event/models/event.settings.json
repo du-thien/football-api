@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "event"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event_id": {
+      "private": true,
+      "unique": true,
+      "type": "integer"
+    },
+    "home_id": {
+      "type": "integer"
+    },
+    "home_name": {
+      "type": "string"
+    },
+    "away_id": {
+      "type": "integer"
+    },
+    "away_name": {
+      "type": "string"
+    },
+    "market_count": {
+      "type": "integer"
+    },
+    "gl": {
+      "type": "boolean"
+    },
+    "et": {
+      "type": "string"
+    },
+    "markets": {
+      "collection": "market"
+    }
+  }
+}

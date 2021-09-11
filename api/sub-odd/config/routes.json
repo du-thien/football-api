@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sub-odds",
+      "handler": "sub-odd.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sub-odds/count",
+      "handler": "sub-odd.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sub-odds/:id",
+      "handler": "sub-odd.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sub-odds",
+      "handler": "sub-odd.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sub-odds/:id",
+      "handler": "sub-odd.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sub-odds/:id",
+      "handler": "sub-odd.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

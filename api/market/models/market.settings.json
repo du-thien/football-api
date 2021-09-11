@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "markets",
+  "info": {
+    "name": "market"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "odds": {
+      "collection": "sub-odd"
+    },
+    "market_id": {
+      "type": "integer",
+      "unique": true,
+      "private": true
+    },
+    "g_id": {
+      "type": "integer"
+    }
+  }
+}

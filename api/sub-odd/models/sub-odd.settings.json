@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "odds",
+  "info": {
+    "name": "Odd",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "soi": {
+      "type": "string"
+    },
+    "proportion": {
+      "type": "string"
+    },
+    "odds_home": {
+      "model": "odds-proportion"
+    },
+    "odds_away": {
+      "model": "odds-proportion"
+    },
+    "main_line": {
+      "type": "boolean"
+    },
+    "home_id": {
+      "type": "string"
+    },
+    "away_id": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/odds-proportions",
+      "handler": "odds-proportion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/odds-proportions/count",
+      "handler": "odds-proportion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/odds-proportions/:id",
+      "handler": "odds-proportion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/odds-proportions",
+      "handler": "odds-proportion.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/odds-proportions/:id",
+      "handler": "odds-proportion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/odds-proportions/:id",
+      "handler": "odds-proportion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

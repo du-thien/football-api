@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leagues_event",
+  "info": {
+    "name": "leaguesEvent"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "events": {
+      "collection": "event"
+    },
+    "si": {
+      "type": "integer"
+    },
+    "league_id": {
+      "type": "integer"
+    },
+    "league_name": {
+      "type": "richtext"
+    },
+    "league_order": {
+      "type": "integer"
+    }
+  }
+}
