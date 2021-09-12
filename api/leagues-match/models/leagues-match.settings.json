@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leagues_matches",
+  "info": {
+    "name": "leaguesMatch",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "si": {
+      "type": "integer"
+    },
+    "league_id": {
+      "type": "integer"
+    },
+    "league_name": {
+      "type": "richtext"
+    },
+    "league_order": {
+      "type": "integer"
+    },
+    "matches": {
+      "collection": "match"
+    }
+  }
+}

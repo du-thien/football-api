@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "name": "match"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "match_id": {
+      "type": "integer",
+      "private": true,
+      "unique": true
+    },
+    "home_id": {
+      "type": "integer"
+    },
+    "home_name": {
+      "type": "string"
+    },
+    "away_id": {
+      "type": "integer"
+    },
+    "away_name": {
+      "type": "string"
+    },
+    "market_count": {
+      "type": "integer"
+    },
+    "gl": {
+      "type": "boolean"
+    },
+    "et": {
+      "type": "string"
+    },
+    "markets": {
+      "collection": "market"
+    }
+  }
+}

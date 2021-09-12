@@ -2,22 +2,26 @@
   "kind": "collectionType",
   "collectionName": "leagues",
   "info": {
-    "name": "league"
+    "name": "league",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "draftAndPublish": true
+    "timestamps": false,
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "leaqueId": {
+    "league_id": {
       "type": "integer",
       "unique": true,
       "private": true
     },
-    "leagueName": {
+    "league_name": {
       "type": "string"
+    },
+    "country_id": {
+      "type": "integer"
     }
   }
 }

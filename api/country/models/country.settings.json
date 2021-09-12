@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "markets",
+  "collectionName": "countries",
   "info": {
-    "name": "market",
+    "name": "country",
     "description": ""
   },
   "options": {
@@ -12,16 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "odds": {
-      "collection": "sub-odd"
-    },
-    "market_id": {
+    "country_id": {
       "type": "integer",
       "unique": true,
       "private": true
     },
-    "g_id": {
+    "country_name": {
+      "type": "string"
+    },
+    "continent_id": {
       "type": "integer"
+    },
+    "continent_name": {
+      "type": "string"
+    },
+    "flag": {
+      "type": "string"
     }
   }
 }
