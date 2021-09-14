@@ -1,10 +1,12 @@
-const { appAxios } = require("../../appAxios");
+const axios = require("../../plugins/axios");
 const { sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   async findOne(ctx) {
     const { id } = ctx.params;
-    const res = await appAxios.get(`/config_tree_mini/41/0/1/${id}`);
+    const res = await axios.get(`${process.env.S5_URL}/config_tree_mini/41/0/1/${id}`, {
+      headers: s5Header
+     });
     const { tournaments, uniquetournaments } =
       res.data.doc[0].data[0].realcategories[0];
 

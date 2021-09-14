@@ -1,11 +1,14 @@
-const { appAxios } = require("../../appAxios");
+const axios = require("../../plugins/axios");
 const { downloadImage } = require("../../utils/downloadImage");
 const mime = require("mime-types");
+const { s5Header } = require("../../constants/headers");
 
 module.exports = {
   async sync(ctx) {
     try {
-      const res = await appAxios.get("/config_tree_mini/41/0/1");
+      const res = await axios.get(`${process.env.S5_URL}/config_tree_mini/41/0/1`, {
+        headers: s5Header
+       });
       const data = res.data.doc[0].data[0].realcategories;
       const countries = await Promise.all(
         data.map(async ({ _id, name, cc }) => {
@@ -50,7 +53,7 @@ module.exports = {
   },
 
   async upload(ctx) {
-    // const image = await appAxios.get(imageUrl).then((res) => {
+    // const image = await axios.get(imageUrl).then((res) => {
     //   console.log(res);
     // });
     // const buffers = await strapi.plugins.upload.services.upload.bufferize({
@@ -68,7 +71,7 @@ module.exports = {
     //     sizeLimit: 1000000,
     //   }
     // );
-    // appAxios.get(imageUrl).then((response) => {
+    // axios.get(imageUrl).then((response) => {
     //   const data = new FormData();
     //   data.append("files", {
     //     uri: logo.uri,
@@ -78,7 +81,7 @@ module.exports = {
     //   data.append("refId", 1);
     //   data.append("ref", "country");
     //   data.append("field", "flag");
-    //   appAxios("http://localhost:1337/upload", {
+    //   axios("http://localhost:1337/upload", {
     //     method: "POST",
     //     body: data,
     //   })
