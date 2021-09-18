@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teams",
+  "info": {
+    "name": "team"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tid": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "tla": {
+      "type": "string"
+    },
+    "img": {
+      "type": "string"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "currentSeason": {
+      "model": "season"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "areas",
+  "info": {
+    "name": "area",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "countryCode": {
+      "type": "string"
+    },
+    "parentAreaId": {
+      "type": "integer"
+    },
+    "parentArea": {
+      "type": "string"
+    },
+    "img": {
+      "type": "string"
+    },
+    "areaId": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "childAreas": {
+      "collection": "area"
+    }
+  }
+}

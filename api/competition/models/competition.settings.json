@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "competitions",
+  "info": {
+    "name": "competition",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cid": {
+      "type": "integer",
+      "unique": true,
+      "private": true
+    },
+    "area": {
+      "model": "area"
+    },
+    "name_vi": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "code_vi": {
+      "type": "string"
+    },
+    "code_en": {
+      "type": "string"
+    },
+    "img": {
+      "type": "string"
+    },
+    "plan": {
+      "type": "string"
+    },
+    "currentSeason": {
+      "model": "season"
+    },
+    "seasons": {
+      "collection": "season"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seasons",
+  "info": {
+    "name": "season"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sid": {
+      "type": "integer",
+      "unique": true,
+      "private": true
+    },
+    "cid": {
+      "type": "integer"
+    },
+    "name_vi": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "code_vi": {
+      "type": "string"
+    },
+    "code_en": {
+      "type": "string"
+    },
+    "currentMatchday": {
+      "type": "integer"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "availableStages": {
+      "type": "string"
+    }
+  }
+}
