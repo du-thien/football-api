@@ -64,14 +64,20 @@ module.exports = {
   async updateScores(ctx) {
     try {
       const { cid, year } = ctx.query;
-      const res = await axios.get(
-        `${process.env.FB_URL}/competitions/${cid}/matches?seasons=${year}`,
-        {
-          headers: fbHeader,
-        }
-      );
+      // const res = await axios.get(
+      //   `${process.env.FB_URL}/competitions/${cid}/matches?seasons=${year}`,
+      //   {
+      //     headers: fbHeader,
+      //   }
+      // );
+      const file = path.join(__dirname, "../../data/matches.json");
+      let rawdata = fs.readFileSync(file);
+      let data = JSON.parse(rawdata);
 
-      const { matches } = res.data;
+
+
+      // const { matches } = res.data;
+      const matches = data
       if (matches.length > 0) {
         for (const match of matches) {
           const { season, homeTeam, awayTeam } = match;
@@ -87,126 +93,8 @@ module.exports = {
           });
 
           if (home && away) {
-            const { score, id } = match;
-            let pointsH =
-              score.winner === "HOME_TEAM"
-                ? home.points + 3
-                : score.winner === "DRAW"
-                ? home.points + 1
-                : home.points;
-
-            let wonH = score.winner === "HOME_TEAM" ? home.won + 1 : home.won;
-            let drawH = score.winner === "DRAW" ? home.draw + 1 : home.draw;
-            let lostH =
-              score.winner === "AWAY_TEAM" ? home.lost + 1 : home.lost;
-            let playedGamesH = home.playedGames + 1;
-
-            let goalsForH = score.fullTime.homeTeam + home.goalsFor;
-            let goalsAgainstH = score.fullTime.awayTeam + home.goalsAgainst;
-            let goalDifferenceH = goalsForH - goalsAgainstH;
-
-            let goalsForHome = score.fullTime.homeTeam + home.goalsForHome;
-            let pointsHome =
-              score.winner === "HOME_TEAM"
-                ? home.pointsHome + 3
-                : score.winner === "DRAW"
-                ? home.pointsHome + 1
-                : home.pointsHome;
-
-            let arrHomeMatches = home.homeMatches ? home.homeMatches : [];
-            arrHomeMatches.push({
-              id,
-              homeTeam,
-              awayTeam,
-            });
-
-            let lastHomeMatches = home.lastMatches ? home.lastMatches : [];
-            lastHomeMatches.push({
-              id,
-              homeTeam,
-              awayTeam,
-            });
-
-            await strapi.services.standing.update(
-              {
-                tid: homeTeam.id,
-                sid: season.id,
-              },
-              {
-                playedGames: playedGamesH,
-                won: wonH,
-                draw: drawH,
-                lost: lostH,
-                points: pointsH,
-                goalsFor: goalsForH,
-                goalsAgainst: goalsAgainstH,
-                goalDifference: goalDifferenceH,
-                goalsForHome: goalsForHome,
-                pointsHome: pointsHome,
-                homeMatches: arrHomeMatches,
-                lastMatches: lastHomeMatches,
-              }
-            );
-
-            // Away
-            let pointsA =
-              score.winner === "AWAY_TEAM"
-                ? away.points + 3
-                : score.winner === "DRAW"
-                ? away.points + 1
-                : away.points;
-            let wonA = score.winner === "AWAY_TEAM" ? away.won + 1 : away.won;
-            let drawA = score.winner === "DRAW" ? away.draw + 1 : away.draw;
-            let lostA =
-              score.winner === "HOME_TEAM" ? away.lost + 1 : away.lost;
-            let playedGamesA = away.playedGames + 1;
-
-            let goalsForA = score.fullTime.awayTeam + away.goalsFor;
-            let goalsAgainstA = score.fullTime.homeTeam + away.goalsAgainst;
-            let goalDifferenceA = goalsForA - goalsAgainstA;
-
-            let goalsForAway = score.fullTime.awayTeam + away.goalsForAway;
-            let pointsAway =
-              score.winner === "AWAY_TEAM"
-                ? away.pointsAway + 3
-                : score.winner === "DRAW"
-                ? away.pointsAway + 1
-                : away.pointsAway;
-
-            let arrAwaysMatches = away.homeMatches ? away.homeMatches : [];
-            arrAwaysMatches.push({
-              id,
-              homeTeam,
-              awayTeam,
-            });
-
-            let lastAwaysMatches = away.lastMatches ? away.lastMatches : [];
-            lastAwaysMatches.push({
-              id,
-              homeTeam,
-              awayTeam,
-            });
-
-            await strapi.services.standing.update(
-              {
-                tid: awayTeam.id,
-                sid: season.id,
-              },
-              {
-                playedGames: playedGamesA,
-                won: wonA,
-                draw: drawA,
-                lost: lostA,
-                points: pointsA,
-                goalsFor: goalsForA,
-                goalsAgainst: goalsAgainstA,
-                goalDifference: goalDifferenceA,
-                goalsForAway: goalsForAway,
-                pointsAway: pointsAway,
-                awayMatches: arrAwaysMatches,
-                lastMatches: lastAwaysMatches,
-              }
-            );
+            await getHomeScores(home, match);
+            await getAwayScores(away, match);
           }
         }
       }
@@ -218,4 +106,128 @@ module.exports = {
       console.log(error);
     }
   },
+};
+
+const getHomeScores = async (home, match) => {
+  const { score, id, homeTeam, awayTeam, season } = match;
+  let pointsH =
+    score.winner === "HOME_TEAM"
+      ? home.points + 3
+      : score.winner === "DRAW"
+      ? home.points + 1
+      : home.points;
+
+  let wonH = score.winner === "HOME_TEAM" ? home.won + 1 : home.won;
+  let drawH = score.winner === "DRAW" ? home.draw + 1 : home.draw;
+  let lostH = score.winner === "AWAY_TEAM" ? home.lost + 1 : home.lost;
+  let playedGamesH = home.playedGames + 1;
+
+  let goalsForH = score.fullTime.homeTeam + home.goalsFor;
+  let goalsAgainstH = score.fullTime.awayTeam + home.goalsAgainst;
+  let goalDifferenceH = goalsForH - goalsAgainstH;
+
+  let goalsForHome = score.fullTime.homeTeam + home.goalsForHome;
+  let pointsHome =
+    score.winner === "HOME_TEAM"
+      ? home.pointsHome + 3
+      : score.winner === "DRAW"
+      ? home.pointsHome + 1
+      : home.pointsHome;
+
+  let arrHomeMatches = home.homeMatches ? home.homeMatches : [];
+  arrHomeMatches.push({
+    id,
+    homeTeam,
+    awayTeam,
+  });
+
+  let lastHomeMatches = home.lastMatches ? home.lastMatches : [];
+  lastHomeMatches.push({
+    id,
+    homeTeam,
+    awayTeam,
+  });
+
+  return await strapi.services.standing.update(
+    {
+      tid: homeTeam.id,
+      sid: season.id,
+    },
+    {
+      playedGames: playedGamesH,
+      won: wonH,
+      draw: drawH,
+      lost: lostH,
+      points: pointsH,
+      goalsFor: goalsForH,
+      goalsAgainst: goalsAgainstH,
+      goalDifference: goalDifferenceH,
+      goalsForHome: goalsForHome,
+      pointsHome: pointsHome,
+      homeMatches: arrHomeMatches,
+      lastMatches: lastHomeMatches,
+    }
+  );
+};
+
+const getAwayScores = async (away, match) => {
+  const { score, id, homeTeam, awayTeam, season } = match;
+  // Away
+  let pointsA =
+    score.winner === "AWAY_TEAM"
+      ? away.points + 3
+      : score.winner === "DRAW"
+      ? away.points + 1
+      : away.points;
+  let wonA = score.winner === "AWAY_TEAM" ? away.won + 1 : away.won;
+  let drawA = score.winner === "DRAW" ? away.draw + 1 : away.draw;
+  let lostA = score.winner === "HOME_TEAM" ? away.lost + 1 : away.lost;
+  let playedGamesA = away.playedGames + 1;
+
+  let goalsForA = score.fullTime.awayTeam + away.goalsFor;
+  let goalsAgainstA = score.fullTime.homeTeam + away.goalsAgainst;
+  let goalDifferenceA = goalsForA - goalsAgainstA;
+
+  let goalsForAway = score.fullTime.awayTeam + away.goalsForAway;
+  let pointsAway =
+    score.winner === "AWAY_TEAM"
+      ? away.pointsAway + 3
+      : score.winner === "DRAW"
+      ? away.pointsAway + 1
+      : away.pointsAway;
+
+  let arrAwaysMatches = away.homeMatches ? away.homeMatches : [];
+  arrAwaysMatches.push({
+    id,
+    homeTeam,
+    awayTeam,
+  });
+
+  let lastAwaysMatches = away.lastMatches ? away.lastMatches : [];
+  lastAwaysMatches.push({
+    id,
+    homeTeam,
+    awayTeam,
+  });
+
+  return await strapi.services.standing.update(
+    {
+      tid: awayTeam.id,
+      sid: season.id,
+    },
+    {
+      playedGames: playedGamesA,
+      won: wonA,
+      draw: drawA,
+      lost: lostA,
+      points: pointsA,
+      goalsFor: goalsForA,
+      goalsAgainst: goalsAgainstA,
+      goalDifference: goalDifferenceA,
+      goalsForAway: goalsForAway,
+      pointsAway: pointsAway,
+      awayMatches: arrAwaysMatches,
+      lastMatches: lastAwaysMatches,
+    }
+  );
 };
