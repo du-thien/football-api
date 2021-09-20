@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "standings",
+  "info": {
+    "name": "standing",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sid": {
+      "type": "integer"
+    },
+    "tid": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "integer",
+      "default": 0
+    },
+    "playedGames": {
+      "type": "integer",
+      "default": 0
+    },
+    "won": {
+      "type": "integer",
+      "default": 0
+    },
+    "draw": {
+      "type": "integer",
+      "default": 0
+    },
+    "lost": {
+      "type": "integer",
+      "default": 0
+    },
+    "points": {
+      "type": "integer",
+      "default": 0
+    },
+    "goalsFor": {
+      "type": "integer",
+      "default": 0
+    },
+    "goalsAgainst": {
+      "type": "integer",
+      "default": 0
+    },
+    "goalDifference": {
+      "type": "integer",
+      "default": 0
+    },
+    "goalsForAway": {
+      "type": "integer",
+      "default": 0
+    },
+    "goalsForHome": {
+      "type": "integer",
+      "default": 0
+    },
+    "pointsAway": {
+      "type": "integer",
+      "default": 0
+    },
+    "pointsHome": {
+      "type": "integer",
+      "default": 0
+    },
+    "competition": {
+      "model": "competition"
+    },
+    "lastMatches": {
+      "type": "json"
+    },
+    "homeMatches": {
+      "type": "json"
+    },
+    "awayMatches": {
+      "type": "json"
+    }
+  }
+}

@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/seasons/sync-data",
+      "handler": "season.sync",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/seasons/count",
       "handler": "season.count",
       "config": {

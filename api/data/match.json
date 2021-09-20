@@ -1,0 +1,170 @@
+[
+  {
+    "id": 327362,
+    "season": {
+      "id": 733,
+      "startDate": "2021-08-13",
+      "endDate": "2022-05-23",
+      "currentMatchday": 5
+    },
+    "utcDate": "2021-08-13T19:00:00Z",
+    "status": "FINISHED",
+    "matchday": 1,
+    "stage": "REGULAR_SEASON",
+    "group": null,
+    "lastUpdated": "2021-09-20T08:20:14Z",
+    "odds": {
+      "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+    },
+    "score": {
+      "winner": "HOME_TEAM",
+      "duration": "REGULAR",
+      "fullTime": {
+        "homeTeam": 2,
+        "awayTeam": 0
+      },
+      "halfTime": {
+        "homeTeam": 1,
+        "awayTeam": 0
+      },
+      "extraTime": {
+        "homeTeam": null,
+        "awayTeam": null
+      },
+      "penalties": {
+        "homeTeam": null,
+        "awayTeam": null
+      }
+    },
+    "homeTeam": {
+      "id": 402,
+      "name": "Brentford FC"
+    },
+    "awayTeam": {
+      "id": 57,
+      "name": "Arsenal FC"
+    },
+    "referees": [
+      {
+        "id": 11605,
+        "name": "Michael Oliver",
+        "role": "REFEREE",
+        "nationality": "England"
+      },
+      {
+        "id": 11564,
+        "name": "Stuart Burt",
+        "role": "ASSISTANT_REFEREE_N1",
+        "nationality": "England"
+      },
+      {
+        "id": 11488,
+        "name": "Simon Bennett",
+        "role": "ASSISTANT_REFEREE_N2",
+        "nationality": "England"
+      },
+      {
+        "id": 11575,
+        "name": "Mike Dean",
+        "role": "FOURTH_OFFICIAL",
+        "nationality": "England"
+      },
+      {
+        "id": 11443,
+        "name": "Chris Kavanagh",
+        "role": "VIDEO_ASSISANT_REFEREE_N1",
+        "nationality": "England"
+      },
+      {
+        "id": 98555,
+        "name": "Sian Massey-Ellis",
+        "role": "VIDEO_ASSISANT_REFEREE_N2",
+        "nationality": "England"
+      }
+    ]
+  },
+  {
+    "id": 327363,
+    "season": {
+      "id": 733,
+      "startDate": "2021-08-13",
+      "endDate": "2022-05-23",
+      "currentMatchday": 4
+    },
+    "utcDate": "2021-08-13T19:00:00Z",
+    "status": "FINISHED",
+    "matchday": 1,
+    "stage": "REGULAR_SEASON",
+    "group": null,
+    "lastUpdated": "2021-09-20T08:20:14Z",
+    "odds": {
+      "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+    },
+    "score": {
+      "winner": "HOME_TEAM",
+      "duration": "REGULAR",
+      "fullTime": {
+        "homeTeam": 1,
+        "awayTeam": 0
+      },
+      "halfTime": {
+        "homeTeam": 1,
+        "awayTeam": 0
+      },
+      "extraTime": {
+        "homeTeam": null,
+        "awayTeam": null
+      },
+      "penalties": {
+        "homeTeam": null,
+        "awayTeam": null
+      }
+    },
+    "homeTeam": {
+      "id": 402,
+      "name": "Brentford FC"
+    },
+    "awayTeam": {
+      "id": 57,
+      "name": "Arsenal FC"
+    },
+    "referees": [
+      {
+        "id": 11605,
+        "name": "Michael Oliver",
+        "role": "REFEREE",
+        "nationality": "England"
+      },
+      {
+        "id": 11564,
+        "name": "Stuart Burt",
+        "role": "ASSISTANT_REFEREE_N1",
+        "nationality": "England"
+      },
+      {
+        "id": 11488,
+        "name": "Simon Bennett",
+        "role": "ASSISTANT_REFEREE_N2",
+        "nationality": "England"
+      },
+      {
+        "id": 11575,
+        "name": "Mike Dean",
+        "role": "FOURTH_OFFICIAL",
+        "nationality": "England"
+      },
+      {
+        "id": 11443,
+        "name": "Chris Kavanagh",
+        "role": "VIDEO_ASSISANT_REFEREE_N1",
+        "nationality": "England"
+      },
+      {
+        "id": 98555,
+        "name": "Sian Massey-Ellis",
+        "role": "VIDEO_ASSISANT_REFEREE_N2",
+        "nationality": "England"
+      }
+    ]
+  }
+]

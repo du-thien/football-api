@@ -11,7 +11,7 @@
     {
       "method": "GET",
       "path": "/areas/sync-data",
-      "handler": "area.syncData",
+      "handler": "area.sync",
       "config": {
         "policies": []
       }

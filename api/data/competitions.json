@@ -1,0 +1,92 @@
+[
+  {
+    "id": 2001,
+    "name": "UEFA Champions League",
+    "arid": 2077,
+    "img": "",
+    "code": "CL",
+    "plan": "TIER_ONE",
+    "currentSeason": 734
+  },
+  {
+    "id": 2021,
+    "name": "Premier League",
+    "arid": 2072,
+    "img": "",
+    "code": "PL",
+    "plan": "TIER_ONE",
+    "currentSeason": 733
+  },
+  {
+    "id": 2014,
+    "name": "Primera Division",
+    "arid": 2224,
+    "img": "",
+    "code": "PD",
+    "plan": "TIER_ONE",
+    "currentSeason": 380
+  },
+  {
+    "id": 2019,
+    "name": "Serie A",
+    "arid": 2114,
+    "img": "",
+    "code": "SA",
+    "plan": "TIER_ONE",
+    "currentSeason": 757
+  },
+  {
+    "id": 2002,
+    "name": "Bundesliga",
+    "arid": 2088,
+    "img": "",
+    "code": "BL1",
+    "plan": "TIER_ONE",
+    "currentSeason": 742
+  },
+  {
+    "id": 2015,
+    "name": "Ligue 1",
+    "arid": 2081,
+    "img": "",
+    "code": "FL1",
+    "plan": "TIER_ONE",
+    "currentSeason": 746
+  },
+  {
+    "id": 2016,
+    "name": "Championship",
+    "arid": 2072,
+    "img": "",
+    "code": "ELC",
+    "plan": "TIER_ONE",
+    "currentSeason": 735
+  },
+  {
+    "id": 2017,
+    "name": "Primeira Liga",
+    "arid": 2187,
+    "img": "",
+    "code": "PPL",
+    "plan": "TIER_ONE",
+    "currentSeason": 755
+  },
+  {
+    "id": 2003,
+    "name": "Eredivisie",
+    "arid": 2163,
+    "img": "",
+    "code": "DED",
+    "plan": "TIER_ONE",
+    "currentSeason": 728
+  },
+  {
+    "id": 2013,
+    "name": "Campeonato Brasileiro Série A",
+    "arid": 2032,
+    "img": "",
+    "code": "BSA",
+    "plan": "TIER_ONE",
+    "currentSeason": 726
+  }
+]

@@ -2,7 +2,7 @@ const axios = require("../../plugins/axios");
 const { fbHeader } = require("../../constants/headers");
 const { insertManyAreas } = require("../helpers/area");
 module.exports = {
-  async syncData(ctx) {
+  async sync(ctx) {
     try {
       const res = await axios.get(`${process.env.FB_URL}/areas`, {
         headers: fbHeader,

@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/competitions/sync-data",
+      "handler": "competition.sync",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/competitions/count",
       "handler": "competition.count",
       "config": {

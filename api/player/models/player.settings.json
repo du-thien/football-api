@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "seasons",
+  "collectionName": "players",
   "info": {
-    "name": "season",
+    "name": "player",
     "description": ""
   },
   "options": {
@@ -12,37 +12,40 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "sid": {
+    "pid": {
       "type": "integer",
       "unique": true,
       "private": true
     },
-    "name_vi": {
+    "team": {
+      "model": "team"
+    },
+    "name": {
       "type": "string"
     },
-    "name_en": {
+    "firstName": {
       "type": "string"
     },
-    "code_vi": {
+    "position": {
       "type": "string"
     },
-    "code_en": {
+    "dateOfBirth": {
       "type": "string"
     },
-    "currentMatchday": {
+    "countryOfBirth": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string"
+    },
+    "shirtNumber": {
       "type": "integer"
     },
-    "startDate": {
+    "role": {
       "type": "string"
-    },
-    "endDate": {
-      "type": "string"
-    },
-    "competition": {
-      "model": "competition"
-    },
-    "winner": {
-      "model": "team"
     }
   }
 }

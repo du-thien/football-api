@@ -1,0 +1,2171 @@
+[
+  {
+    "id": 734,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2021/2022",
+    "code_vi": "UEFA Champions League 2021/2022",
+    "startDate": "2021-06-26",
+    "endDate": "2022-05-22",
+
+    "currentMatchday": 1,
+    "winner": 0
+  },
+  {
+    "id": 642,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2020/2021",
+    "code_vi": "UEFA Champions League 2020/2021",
+    "startDate": "2020-08-08",
+    "endDate": "2021-05-29",
+
+    "currentMatchday": 6,
+    "winner": 0
+  },
+  {
+    "id": 495,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2019/2020",
+    "code_vi": "UEFA Champions League 2019/2020",
+    "startDate": "2019-06-25",
+    "endDate": "2020-08-23",
+
+    "currentMatchday": 6,
+    "winner": 0
+  },
+  {
+    "id": 175,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2018/2019",
+    "code_vi": "UEFA Champions League 2018/2019",
+    "startDate": "2018-06-26",
+    "endDate": "2019-06-01",
+
+    "currentMatchday": 7,
+    "winner": 0
+  },
+  {
+    "id": 2,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2017/2018",
+    "code_vi": "UEFA Champions League 2017/2018",
+    "startDate": "2017-06-27",
+    "endDate": "2018-05-26",
+
+    "currentMatchday": 6,
+    "winner": 86
+  },
+  {
+    "id": 278,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2016/2017",
+    "code_vi": "UEFA Champions League 2016/2017",
+    "startDate": "2016-09-13",
+    "endDate": "2017-06-03",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 279,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2015/2016",
+    "code_vi": "UEFA Champions League 2015/2016",
+    "startDate": "2015-09-15",
+    "endDate": "2016-05-28",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 280,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2014/2015",
+    "code_vi": "UEFA Champions League 2014/2015",
+    "startDate": "2014-09-16",
+    "endDate": "2015-06-06",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 300,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2013/2014",
+    "code_vi": "UEFA Champions League 2013/2014",
+    "startDate": "2013-09-17",
+    "endDate": "2014-05-24",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 301,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2012/2013",
+    "code_vi": "UEFA Champions League 2012/2013",
+    "startDate": "2012-09-18",
+    "endDate": "2013-05-25",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 302,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2011/2012",
+    "code_vi": "UEFA Champions League 2011/2012",
+    "startDate": "2011-09-13",
+    "endDate": "2012-05-19",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 303,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2010/2011",
+    "code_vi": "UEFA Champions League 2010/2011",
+    "startDate": "2010-09-14",
+    "endDate": "2011-05-28",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 304,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2009/2010",
+    "code_vi": "UEFA Champions League 2009/2010",
+    "startDate": "2009-09-15",
+    "endDate": "2010-05-22",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 305,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2008/2009",
+    "code_vi": "UEFA Champions League 2008/2009",
+    "startDate": "2008-09-16",
+    "endDate": "2009-05-27",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 306,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2007/2008",
+    "code_vi": "UEFA Champions League 2007/2008",
+    "startDate": "2007-09-18",
+    "endDate": "2008-05-21",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 307,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2006/2007",
+    "code_vi": "UEFA Champions League 2006/2007",
+    "startDate": "2006-09-12",
+    "endDate": "2007-05-23",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 308,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2005/2006",
+    "code_vi": "UEFA Champions League 2005/2006",
+    "startDate": "2005-09-13",
+    "endDate": "2006-05-17",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 309,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2004/2005",
+    "code_vi": "UEFA Champions League 2004/2005",
+    "startDate": "2004-09-14",
+    "endDate": "2005-05-25",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 310,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2003/2004",
+    "code_vi": "UEFA Champions League 2003/2004",
+    "startDate": "2003-09-16",
+    "endDate": "2004-05-26",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 311,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2002/2003",
+    "code_vi": "UEFA Champions League 2002/2003",
+    "startDate": "2002-10-01",
+    "endDate": "2003-05-28",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 312,
+    "cid": 2001,
+    "name_en": "UEFA Champions League",
+    "name_vi": "UEFA Champions League",
+    "code_en": "UEFA Champions League 2001/2002",
+    "code_vi": "UEFA Champions League 2001/2002",
+    "startDate": "2001-09-11",
+    "endDate": "2002-05-15",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 733,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2021/2022",
+    "code_vi": "Premier League 2021/2022",
+    "startDate": "2021-08-13",
+    "endDate": "2022-05-23",
+
+    "currentMatchday": 5,
+    "winner": 0
+  },
+  {
+    "id": 619,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2020/2021",
+    "code_vi": "Premier League 2020/2021",
+    "startDate": "2020-09-12",
+    "endDate": "2021-05-23",
+
+    "currentMatchday": 38,
+    "winner": 65
+  },
+  {
+    "id": 468,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2019/2020",
+    "code_vi": "Premier League 2019/2020",
+    "startDate": "2019-08-09",
+    "endDate": "2020-07-25",
+
+    "currentMatchday": 38,
+    "winner": 64
+  },
+  {
+    "id": 151,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2018/2019",
+    "code_vi": "Premier League 2018/2019",
+    "startDate": "2018-08-10",
+    "endDate": "2019-05-12",
+
+    "currentMatchday": 38,
+    "winner": 65
+  },
+  {
+    "id": 23,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2017/2018",
+    "code_vi": "Premier League 2017/2018",
+    "startDate": "2017-08-11",
+    "endDate": "2018-05-13",
+
+    "currentMatchday": 38,
+    "winner": 65
+  },
+  {
+    "id": 256,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2016/2017",
+    "code_vi": "Premier League 2016/2017",
+    "startDate": "2016-08-13",
+    "endDate": "2017-05-21",
+
+    "currentMatchday": 0,
+    "winner": 61
+  },
+  {
+    "id": 257,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2015/2016",
+    "code_vi": "Premier League 2015/2016",
+    "startDate": "2015-08-08",
+    "endDate": "2016-05-17",
+
+    "currentMatchday": 0,
+    "winner": 338
+  },
+  {
+    "id": 258,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2014/2015",
+    "code_vi": "Premier League 2014/2015",
+    "startDate": "2014-08-16",
+    "endDate": "2015-05-24",
+
+    "currentMatchday": 0,
+    "winner": 61
+  },
+  {
+    "id": 259,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2013/2014",
+    "code_vi": "Premier League 2013/2014",
+    "startDate": "2013-08-17",
+    "endDate": "2014-05-11",
+
+    "currentMatchday": 0,
+    "winner": 65
+  },
+  {
+    "id": 260,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2012/2013",
+    "code_vi": "Premier League 2012/2013",
+    "startDate": "2012-08-18",
+    "endDate": "2013-05-19",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 261,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2011/2012",
+    "code_vi": "Premier League 2011/2012",
+    "startDate": "2011-08-13",
+    "endDate": "2012-05-13",
+
+    "currentMatchday": 0,
+    "winner": 65
+  },
+  {
+    "id": 262,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2010/2011",
+    "code_vi": "Premier League 2010/2011",
+    "startDate": "2010-08-14",
+    "endDate": "2011-05-22",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 263,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2009/2010",
+    "code_vi": "Premier League 2009/2010",
+    "startDate": "2009-08-15",
+    "endDate": "2010-05-09",
+
+    "currentMatchday": 0,
+    "winner": 61
+  },
+  {
+    "id": 264,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2008/2009",
+    "code_vi": "Premier League 2008/2009",
+    "startDate": "2008-08-16",
+    "endDate": "2009-05-24",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 265,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2007/2008",
+    "code_vi": "Premier League 2007/2008",
+    "startDate": "2007-08-11",
+    "endDate": "2008-05-11",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 266,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2006/2007",
+    "code_vi": "Premier League 2006/2007",
+    "startDate": "2006-08-19",
+    "endDate": "2007-05-13",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 267,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2005/2006",
+    "code_vi": "Premier League 2005/2006",
+    "startDate": "2005-08-13",
+    "endDate": "2006-05-07",
+
+    "currentMatchday": 0,
+    "winner": 61
+  },
+  {
+    "id": 268,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2004/2005",
+    "code_vi": "Premier League 2004/2005",
+    "startDate": "2004-08-14",
+    "endDate": "2005-05-15",
+
+    "currentMatchday": 0,
+    "winner": 61
+  },
+  {
+    "id": 269,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2003/2004",
+    "code_vi": "Premier League 2003/2004",
+    "startDate": "2003-08-16",
+    "endDate": "2004-05-15",
+
+    "currentMatchday": 0,
+    "winner": 57
+  },
+  {
+    "id": 270,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2002/2003",
+    "code_vi": "Premier League 2002/2003",
+    "startDate": "2002-08-17",
+    "endDate": "2003-05-11",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 271,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2001/2002",
+    "code_vi": "Premier League 2001/2002",
+    "startDate": "2001-08-18",
+    "endDate": "2002-05-11",
+
+    "currentMatchday": 0,
+    "winner": 57
+  },
+  {
+    "id": 272,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 2000/2001",
+    "code_vi": "Premier League 2000/2001",
+    "startDate": "2000-08-19",
+    "endDate": "2001-05-19",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 273,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 1999/2000",
+    "code_vi": "Premier League 1999/2000",
+    "startDate": "1999-08-07",
+    "endDate": "2000-05-14",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 274,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 1998/1999",
+    "code_vi": "Premier League 1998/1999",
+    "startDate": "1998-08-15",
+    "endDate": "1999-05-16",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 275,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 1997/1998",
+    "code_vi": "Premier League 1997/1998",
+    "startDate": "1997-08-09",
+    "endDate": "1998-05-10",
+
+    "currentMatchday": 0,
+    "winner": 57
+  },
+  {
+    "id": 276,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 1996/1997",
+    "code_vi": "Premier League 1996/1997",
+    "startDate": "1996-08-17",
+    "endDate": "1997-05-11",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 277,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 1995/1996",
+    "code_vi": "Premier League 1995/1996",
+    "startDate": "1995-08-19",
+    "endDate": "1996-05-04",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 254,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 1994/1995",
+    "code_vi": "Premier League 1994/1995",
+    "startDate": "1994-08-20",
+    "endDate": "1995-05-14",
+
+    "currentMatchday": 0,
+    "winner": 59
+  },
+  {
+    "id": 255,
+    "cid": 2021,
+    "name_en": "Premier League",
+    "name_vi": "Premier League",
+    "code_en": "Premier League 1993/1994",
+    "code_vi": "Premier League 1993/1994",
+    "startDate": "1993-08-14",
+    "endDate": "1994-05-08",
+
+    "currentMatchday": 0,
+    "winner": 66
+  },
+  {
+    "id": 380,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2021/2022",
+    "code_vi": "Primera Division 2021/2022",
+    "startDate": "2021-08-13",
+    "endDate": "2022-05-22",
+
+    "currentMatchday": 5,
+    "winner": 0
+  },
+  {
+    "id": 635,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2020/2021",
+    "code_vi": "Primera Division 2020/2021",
+    "startDate": "2020-09-13",
+    "endDate": "2021-05-23",
+
+    "currentMatchday": 38,
+    "winner": 78
+  },
+  {
+    "id": 519,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2019/2020",
+    "code_vi": "Primera Division 2019/2020",
+    "startDate": "2019-08-16",
+    "endDate": "2020-07-19",
+
+    "currentMatchday": 38,
+    "winner": 86
+  },
+  {
+    "id": 281,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2018/2019",
+    "code_vi": "Primera Division 2018/2019",
+    "startDate": "2018-08-17",
+    "endDate": "2019-05-26",
+
+    "currentMatchday": 38,
+    "winner": 81
+  },
+  {
+    "id": 16,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2017/2018",
+    "code_vi": "Primera Division 2017/2018",
+    "startDate": "2017-08-18",
+    "endDate": "2018-05-20",
+
+    "currentMatchday": 38,
+    "winner": 81
+  },
+  {
+    "id": 364,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2016/2017",
+    "code_vi": "Primera Division 2016/2017",
+    "startDate": "2016-08-19",
+    "endDate": "2017-05-21",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 365,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2015/2016",
+    "code_vi": "Primera Division 2015/2016",
+    "startDate": "2015-08-22",
+    "endDate": "2016-05-15",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 366,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2014/2015",
+    "code_vi": "Primera Division 2014/2015",
+    "startDate": "2014-08-24",
+    "endDate": "2015-05-23",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 367,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2013/2014",
+    "code_vi": "Primera Division 2013/2014",
+    "startDate": "2013-08-17",
+    "endDate": "2014-05-18",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 368,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2012/2013",
+    "code_vi": "Primera Division 2012/2013",
+    "startDate": "2012-08-18",
+    "endDate": "2013-06-01",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 369,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2011/2012",
+    "code_vi": "Primera Division 2011/2012",
+    "startDate": "2011-08-27",
+    "endDate": "2012-05-13",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 370,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2010/2011",
+    "code_vi": "Primera Division 2010/2011",
+    "startDate": "2010-08-28",
+    "endDate": "2011-05-21",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 381,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2009/2010",
+    "code_vi": "Primera Division 2009/2010",
+    "startDate": "2009-08-29",
+    "endDate": "2010-05-16",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 382,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2008/2009",
+    "code_vi": "Primera Division 2008/2009",
+    "startDate": "2008-08-30",
+    "endDate": "2009-05-31",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 383,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2007/2008",
+    "code_vi": "Primera Division 2007/2008",
+    "startDate": "2007-08-25",
+    "endDate": "2008-05-18",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 384,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2006/2007",
+    "code_vi": "Primera Division 2006/2007",
+    "startDate": "2006-08-26",
+    "endDate": "2007-06-17",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 385,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2005/2006",
+    "code_vi": "Primera Division 2005/2006",
+    "startDate": "2005-08-27",
+    "endDate": "2006-05-20",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 371,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2004/2005",
+    "code_vi": "Primera Division 2004/2005",
+    "startDate": "2004-08-28",
+    "endDate": "2005-05-29",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 372,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2003/2004",
+    "code_vi": "Primera Division 2003/2004",
+    "startDate": "2003-08-30",
+    "endDate": "2004-05-23",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 386,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2002/2003",
+    "code_vi": "Primera Division 2002/2003",
+    "startDate": "2002-08-31",
+    "endDate": "2003-06-22",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 373,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 2000/2001",
+    "code_vi": "Primera Division 2000/2001",
+    "startDate": "2000-09-09",
+    "endDate": "2001-06-17",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 374,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 1999/2000",
+    "code_vi": "Primera Division 1999/2000",
+    "startDate": "1999-08-21",
+    "endDate": "2000-05-20",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 375,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 1998/1999",
+    "code_vi": "Primera Division 1998/1999",
+    "startDate": "1998-08-29",
+    "endDate": "1999-06-20",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 376,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 1997/1998",
+    "code_vi": "Primera Division 1997/1998",
+    "startDate": "1997-08-30",
+    "endDate": "1998-05-16",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 377,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 1996/1997",
+    "code_vi": "Primera Division 1996/1997",
+    "startDate": "1996-08-31",
+    "endDate": "1997-06-15",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 378,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 1995/1996",
+    "code_vi": "Primera Division 1995/1996",
+    "startDate": "1995-09-02",
+    "endDate": "1996-05-26",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 379,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 1994/1995",
+    "code_vi": "Primera Division 1994/1995",
+    "startDate": "1994-09-03",
+    "endDate": "1995-06-18",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 387,
+    "cid": 2014,
+    "name_en": "Primera Division",
+    "name_vi": "Primera Division",
+    "code_en": "Primera Division 1993/1994",
+    "code_vi": "Primera Division 1993/1994",
+    "startDate": "1993-09-05",
+    "endDate": "1994-05-15",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 757,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2021/2022",
+    "code_vi": "Serie A 2021/2022",
+    "startDate": "2021-08-22",
+    "endDate": "2022-05-22",
+
+    "currentMatchday": 4,
+    "winner": 0
+  },
+  {
+    "id": 638,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2020/2021",
+    "code_vi": "Serie A 2020/2021",
+    "startDate": "2020-09-20",
+    "endDate": "2021-05-23",
+
+    "currentMatchday": 38,
+    "winner": 108
+  },
+  {
+    "id": 530,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2019/2020",
+    "code_vi": "Serie A 2019/2020",
+    "startDate": "2019-08-24",
+    "endDate": "2020-08-02",
+
+    "currentMatchday": 38,
+    "winner": 109
+  },
+  {
+    "id": 290,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2018/2019",
+    "code_vi": "Serie A 2018/2019",
+    "startDate": "2018-08-18",
+    "endDate": "2019-05-26",
+
+    "currentMatchday": 38,
+    "winner": 109
+  },
+  {
+    "id": 21,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2017/2018",
+    "code_vi": "Serie A 2017/2018",
+    "startDate": "2017-08-19",
+    "endDate": "2018-05-20",
+
+    "currentMatchday": 38,
+    "winner": 109
+  },
+  {
+    "id": 405,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2016/2017",
+    "code_vi": "Serie A 2016/2017",
+    "startDate": "2016-08-20",
+    "endDate": "2017-05-28",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 406,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2015/2016",
+    "code_vi": "Serie A 2015/2016",
+    "startDate": "2015-08-22",
+    "endDate": "2016-05-15",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 407,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2014/2015",
+    "code_vi": "Serie A 2014/2015",
+    "startDate": "2014-08-30",
+    "endDate": "2015-05-31",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 408,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2013/2014",
+    "code_vi": "Serie A 2013/2014",
+    "startDate": "2013-08-24",
+    "endDate": "2014-05-18",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 416,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2012/2013",
+    "code_vi": "Serie A 2012/2013",
+    "startDate": "2012-08-25",
+    "endDate": "2013-05-19",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 409,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2011/2012",
+    "code_vi": "Serie A 2011/2012",
+    "startDate": "2011-09-09",
+    "endDate": "2012-05-13",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 678,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2010/2011",
+    "code_vi": "Serie A 2010/2011",
+    "startDate": "2010-08-01",
+    "endDate": "2011-06-01",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 410,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2009/2010",
+    "code_vi": "Serie A 2009/2010",
+    "startDate": "2009-08-22",
+    "endDate": "2010-05-16",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 411,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2008/2009",
+    "code_vi": "Serie A 2008/2009",
+    "startDate": "2008-08-30",
+    "endDate": "2009-05-31",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 412,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2007/2008",
+    "code_vi": "Serie A 2007/2008",
+    "startDate": "2007-08-25",
+    "endDate": "2008-05-18",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 413,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2006/2007",
+    "code_vi": "Serie A 2006/2007",
+    "startDate": "2006-09-09",
+    "endDate": "2007-05-27",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 414,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2005/2006",
+    "code_vi": "Serie A 2005/2006",
+    "startDate": "2005-08-27",
+    "endDate": "2006-05-14",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 415,
+    "cid": 2019,
+    "name_en": "Serie A",
+    "name_vi": "Serie A",
+    "code_en": "Serie A 2004/2005",
+    "code_vi": "Serie A 2004/2005",
+    "startDate": "2004-09-11",
+    "endDate": "2005-05-29",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 742,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2021/2022",
+    "code_vi": "Bundesliga 2021/2022",
+    "startDate": "2021-08-13",
+    "endDate": "2022-05-15",
+
+    "currentMatchday": 5,
+    "winner": 0
+  },
+  {
+    "id": 599,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2020/2021",
+    "code_vi": "Bundesliga 2020/2021",
+    "startDate": "2020-09-18",
+    "endDate": "2021-05-23",
+
+    "currentMatchday": 34,
+    "winner": 5
+  },
+  {
+    "id": 474,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2019/2020",
+    "code_vi": "Bundesliga 2019/2020",
+    "startDate": "2019-08-16",
+    "endDate": "2020-06-27",
+
+    "currentMatchday": 34,
+    "winner": 5
+  },
+  {
+    "id": 155,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2018/2019",
+    "code_vi": "Bundesliga 2018/2019",
+    "startDate": "2018-08-24",
+    "endDate": "2019-05-18",
+
+    "currentMatchday": 34,
+    "winner": 5
+  },
+  {
+    "id": 3,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2017/2018",
+    "code_vi": "Bundesliga 2017/2018",
+    "startDate": "2017-08-18",
+    "endDate": "2018-05-21",
+
+    "currentMatchday": 34,
+    "winner": 5
+  },
+  {
+    "id": 213,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2016/2017",
+    "code_vi": "Bundesliga 2016/2017",
+    "startDate": "2016-08-26",
+    "endDate": "2017-05-20",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 214,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2015/2016",
+    "code_vi": "Bundesliga 2015/2016",
+    "startDate": "2015-08-14",
+    "endDate": "2016-05-14",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 417,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2014/2015",
+    "code_vi": "Bundesliga 2014/2015",
+    "startDate": "2014-08-22",
+    "endDate": "2015-05-23",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 215,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2013/2014",
+    "code_vi": "Bundesliga 2013/2014",
+    "startDate": "2013-08-09",
+    "endDate": "2014-05-10",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 216,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2012/2013",
+    "code_vi": "Bundesliga 2012/2013",
+    "startDate": "2012-08-24",
+    "endDate": "2013-05-18",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 217,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2011/2012",
+    "code_vi": "Bundesliga 2011/2012",
+    "startDate": "2011-08-05",
+    "endDate": "2012-05-05",
+
+    "currentMatchday": 0,
+    "winner": 4
+  },
+  {
+    "id": 218,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2010/2011",
+    "code_vi": "Bundesliga 2010/2011",
+    "startDate": "2010-08-20",
+    "endDate": "2011-05-14",
+
+    "currentMatchday": 0,
+    "winner": 4
+  },
+  {
+    "id": 219,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2009/2010",
+    "code_vi": "Bundesliga 2009/2010",
+    "startDate": "2009-08-07",
+    "endDate": "2010-05-08",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 220,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2008/2009",
+    "code_vi": "Bundesliga 2008/2009",
+    "startDate": "2008-08-15",
+    "endDate": "2009-05-23",
+
+    "currentMatchday": 0,
+    "winner": 11
+  },
+  {
+    "id": 221,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2007/2008",
+    "code_vi": "Bundesliga 2007/2008",
+    "startDate": "2007-08-10",
+    "endDate": "2008-05-17",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 224,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2006/2007",
+    "code_vi": "Bundesliga 2006/2007",
+    "startDate": "2006-08-11",
+    "endDate": "2007-05-19",
+
+    "currentMatchday": 0,
+    "winner": 10
+  },
+  {
+    "id": 225,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2005/2006",
+    "code_vi": "Bundesliga 2005/2006",
+    "startDate": "2005-08-05",
+    "endDate": "2006-05-13",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 226,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2004/2005",
+    "code_vi": "Bundesliga 2004/2005",
+    "startDate": "2004-08-06",
+    "endDate": "2005-05-21",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 227,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2003/2004",
+    "code_vi": "Bundesliga 2003/2004",
+    "startDate": "2003-08-01",
+    "endDate": "2004-05-22",
+
+    "currentMatchday": 0,
+    "winner": 12
+  },
+  {
+    "id": 228,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2002/2003",
+    "code_vi": "Bundesliga 2002/2003",
+    "startDate": "2002-08-09",
+    "endDate": "2003-05-24",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 229,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2001/2002",
+    "code_vi": "Bundesliga 2001/2002",
+    "startDate": "2001-07-28",
+    "endDate": "2002-05-04",
+
+    "currentMatchday": 0,
+    "winner": 4
+  },
+  {
+    "id": 230,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 2000/2001",
+    "code_vi": "Bundesliga 2000/2001",
+    "startDate": "2000-08-11",
+    "endDate": "2001-05-19",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 231,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 1999/2000",
+    "code_vi": "Bundesliga 1999/2000",
+    "startDate": "1999-08-13",
+    "endDate": "2000-05-20",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 232,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 1998/1999",
+    "code_vi": "Bundesliga 1998/1999",
+    "startDate": "1998-08-14",
+    "endDate": "1999-05-29",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 233,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 1997/1998",
+    "code_vi": "Bundesliga 1997/1998",
+    "startDate": "1997-08-01",
+    "endDate": "1998-05-09",
+
+    "currentMatchday": 0,
+    "winner": 13
+  },
+  {
+    "id": 234,
+    "cid": 2002,
+    "name_en": "Bundesliga",
+    "name_vi": "Bundesliga",
+    "code_en": "Bundesliga 1996/1997",
+    "code_vi": "Bundesliga 1996/1997",
+    "startDate": "1996-08-16",
+    "endDate": "1997-05-31",
+
+    "currentMatchday": 0,
+    "winner": 5
+  },
+  {
+    "id": 746,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2021/2022",
+    "code_vi": "Ligue 1 2021/2022",
+    "startDate": "2021-08-08",
+    "endDate": "2022-05-22",
+
+    "currentMatchday": 6,
+    "winner": 0
+  },
+  {
+    "id": 596,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2020/2021",
+    "code_vi": "Ligue 1 2020/2021",
+    "startDate": "2020-08-22",
+    "endDate": "2021-05-23",
+
+    "currentMatchday": 38,
+    "winner": 0
+  },
+  {
+    "id": 499,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2019/2020",
+    "code_vi": "Ligue 1 2019/2020",
+    "startDate": "2019-08-09",
+    "endDate": "2020-05-31",
+
+    "currentMatchday": 38,
+    "winner": 0
+  },
+  {
+    "id": 177,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2018/2019",
+    "code_vi": "Ligue 1 2018/2019",
+    "startDate": "2018-08-10",
+    "endDate": "2019-05-25",
+
+    "currentMatchday": 38,
+    "winner": 0
+  },
+  {
+    "id": 17,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2017/2018",
+    "code_vi": "Ligue 1 2017/2018",
+    "startDate": "2017-08-04",
+    "endDate": "2018-05-27",
+
+    "currentMatchday": 38,
+    "winner": 524
+  },
+  {
+    "id": 333,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2016/2017",
+    "code_vi": "Ligue 1 2016/2017",
+    "startDate": "2016-08-12",
+    "endDate": "2017-05-20",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 334,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2015/2016",
+    "code_vi": "Ligue 1 2015/2016",
+    "startDate": "2015-08-07",
+    "endDate": "2016-05-14",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 335,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2014/2015",
+    "code_vi": "Ligue 1 2014/2015",
+    "startDate": "2014-08-08",
+    "endDate": "2015-05-23",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 336,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2013/2014",
+    "code_vi": "Ligue 1 2013/2014",
+    "startDate": "2013-08-09",
+    "endDate": "2014-05-17",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 337,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2012/2013",
+    "code_vi": "Ligue 1 2012/2013",
+    "startDate": "2012-08-10",
+    "endDate": "2013-05-26",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 338,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2011/2012",
+    "code_vi": "Ligue 1 2011/2012",
+    "startDate": "2011-08-06",
+    "endDate": "2012-05-20",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 677,
+    "cid": 2015,
+    "name_en": "Ligue 1",
+    "name_vi": "Ligue 1",
+    "code_en": "Ligue 1 2010/2011",
+    "code_vi": "Ligue 1 2010/2011",
+    "startDate": "2010-08-01",
+    "endDate": "2011-06-01",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 735,
+    "cid": 2016,
+    "name_en": "Championship",
+    "name_vi": "Championship",
+    "code_en": "Championship 2021/2022",
+    "code_vi": "Championship 2021/2022",
+    "startDate": "2021-08-07",
+    "endDate": "2022-05-09",
+
+    "currentMatchday": 7,
+    "winner": 0
+  },
+  {
+    "id": 628,
+    "cid": 2016,
+    "name_en": "Championship",
+    "name_vi": "Championship",
+    "code_en": "Championship 2020/2021",
+    "code_vi": "Championship 2020/2021",
+    "startDate": "2020-09-12",
+    "endDate": "2021-05-08",
+
+    "currentMatchday": 46,
+    "winner": 68
+  },
+  {
+    "id": 503,
+    "cid": 2016,
+    "name_en": "Championship",
+    "name_vi": "Championship",
+    "code_en": "Championship 2019/2020",
+    "code_vi": "Championship 2019/2020",
+    "startDate": "2019-08-02",
+    "endDate": "2020-07-22",
+
+    "currentMatchday": 46,
+    "winner": 0
+  },
+  {
+    "id": 154,
+    "cid": 2016,
+    "name_en": "Championship",
+    "name_vi": "Championship",
+    "code_en": "Championship 2018/2019",
+    "code_vi": "Championship 2018/2019",
+    "startDate": "2018-08-03",
+    "endDate": "2019-05-05",
+
+    "currentMatchday": 46,
+    "winner": 0
+  },
+  {
+    "id": 18,
+    "cid": 2016,
+    "name_en": "Championship",
+    "name_vi": "Championship",
+    "code_en": "Championship 2017/2018",
+    "code_vi": "Championship 2017/2018",
+    "startDate": "2017-08-04",
+    "endDate": "2018-05-26",
+
+    "currentMatchday": 46,
+    "winner": 76
+  },
+  {
+    "id": 755,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2021/2022",
+    "code_vi": "Primeira Liga 2021/2022",
+    "startDate": "2021-08-08",
+    "endDate": "2022-05-15",
+
+    "currentMatchday": 6,
+    "winner": 0
+  },
+  {
+    "id": 644,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2020/2021",
+    "code_vi": "Primeira Liga 2020/2021",
+    "startDate": "2020-09-20",
+    "endDate": "2021-05-19",
+
+    "currentMatchday": 34,
+    "winner": 0
+  },
+  {
+    "id": 484,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2019/2020",
+    "code_vi": "Primeira Liga 2019/2020",
+    "startDate": "2019-08-10",
+    "endDate": "2020-07-26",
+
+    "currentMatchday": 34,
+    "winner": 503
+  },
+  {
+    "id": 183,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2018/2019",
+    "code_vi": "Primeira Liga 2018/2019",
+    "startDate": "2018-08-10",
+    "endDate": "2019-05-19",
+
+    "currentMatchday": 34,
+    "winner": 1903
+  },
+  {
+    "id": 19,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2017/2018",
+    "code_vi": "Primeira Liga 2017/2018",
+    "startDate": "2017-08-06",
+    "endDate": "2018-05-13",
+
+    "currentMatchday": 34,
+    "winner": 503
+  },
+  {
+    "id": 358,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2016/2017",
+    "code_vi": "Primeira Liga 2016/2017",
+    "startDate": "2016-08-12",
+    "endDate": "2017-05-21",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 359,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2015/2016",
+    "code_vi": "Primeira Liga 2015/2016",
+    "startDate": "2015-08-14",
+    "endDate": "2016-05-15",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 360,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2014/2015",
+    "code_vi": "Primeira Liga 2014/2015",
+    "startDate": "2014-08-15",
+    "endDate": "2015-05-24",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 361,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2013/2014",
+    "code_vi": "Primeira Liga 2013/2014",
+    "startDate": "2013-08-16",
+    "endDate": "2014-05-11",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 362,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2012/2013",
+    "code_vi": "Primeira Liga 2012/2013",
+    "startDate": "2012-08-17",
+    "endDate": "2013-05-19",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 363,
+    "cid": 2017,
+    "name_en": "Primeira Liga",
+    "name_vi": "Primeira Liga",
+    "code_en": "Primeira Liga 2011/2012",
+    "code_vi": "Primeira Liga 2011/2012",
+    "startDate": "2011-08-12",
+    "endDate": "2012-05-12",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 728,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2021/2022",
+    "code_vi": "Eredivisie 2021/2022",
+    "startDate": "2021-08-13",
+    "endDate": "2022-05-15",
+
+    "currentMatchday": 5,
+    "winner": 0
+  },
+  {
+    "id": 615,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2020/2021",
+    "code_vi": "Eredivisie 2020/2021",
+    "startDate": "2020-09-12",
+    "endDate": "2021-05-16",
+
+    "currentMatchday": 34,
+    "winner": 0
+  },
+  {
+    "id": 481,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2019/2020",
+    "code_vi": "Eredivisie 2019/2020",
+    "startDate": "2019-08-09",
+    "endDate": "2020-03-08",
+
+    "currentMatchday": 34,
+    "winner": 678
+  },
+  {
+    "id": 156,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2018/2019",
+    "code_vi": "Eredivisie 2018/2019",
+    "startDate": "2018-08-10",
+    "endDate": "2019-05-12",
+
+    "currentMatchday": 34,
+    "winner": 678
+  },
+  {
+    "id": 4,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2017/2018",
+    "code_vi": "Eredivisie 2017/2018",
+    "startDate": "2017-08-11",
+    "endDate": "2018-05-20",
+
+    "currentMatchday": 34,
+    "winner": 674
+  },
+  {
+    "id": 318,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2016/2017",
+    "code_vi": "Eredivisie 2016/2017",
+    "startDate": "2016-08-05",
+    "endDate": "2017-05-14",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 319,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2015/2016",
+    "code_vi": "Eredivisie 2015/2016",
+    "startDate": "2015-08-08",
+    "endDate": "2016-05-08",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 320,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2014/2015",
+    "code_vi": "Eredivisie 2014/2015",
+    "startDate": "2014-08-08",
+    "endDate": "2015-05-17",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 321,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2013/2014",
+    "code_vi": "Eredivisie 2013/2014",
+    "startDate": "2013-08-02",
+    "endDate": "2014-05-18",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 322,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2012/2013",
+    "code_vi": "Eredivisie 2012/2013",
+    "startDate": "2012-08-10",
+    "endDate": "2013-05-26",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 323,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2011/2012",
+    "code_vi": "Eredivisie 2011/2012",
+    "startDate": "2011-08-05",
+    "endDate": "2012-05-06",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 324,
+    "cid": 2003,
+    "name_en": "Eredivisie",
+    "name_vi": "Eredivisie",
+    "code_en": "Eredivisie 2010/2011",
+    "code_vi": "Eredivisie 2010/2011",
+    "startDate": "2010-08-06",
+    "endDate": "2011-05-15",
+
+    "currentMatchday": 0,
+    "winner": 0
+  },
+  {
+    "id": 726,
+    "cid": 2013,
+    "name_en": "Campeonato Brasileiro Série A",
+    "name_vi": "Campeonato Brasileiro Série A",
+    "code_en": "Campeonato Brasileiro Série A 2021/2021",
+    "code_vi": "Campeonato Brasileiro Série A 2021/2021",
+    "startDate": "2021-05-30",
+    "endDate": "2021-12-05",
+
+    "currentMatchday": 20,
+    "winner": 0
+  },
+  {
+    "id": 589,
+    "cid": 2013,
+    "name_en": "Campeonato Brasileiro Série A",
+    "name_vi": "Campeonato Brasileiro Série A",
+    "code_en": "Campeonato Brasileiro Série A 2020/2021",
+    "code_vi": "Campeonato Brasileiro Série A 2020/2021",
+    "startDate": "2020-08-09",
+    "endDate": "2021-02-24",
+
+    "currentMatchday": 38,
+    "winner": 1783
+  },
+  {
+    "id": 460,
+    "cid": 2013,
+    "name_en": "Campeonato Brasileiro Série A",
+    "name_vi": "Campeonato Brasileiro Série A",
+    "code_en": "Campeonato Brasileiro Série A 2019/2019",
+    "code_vi": "Campeonato Brasileiro Série A 2019/2019",
+    "startDate": "2019-04-28",
+    "endDate": "2019-12-08",
+
+    "currentMatchday": 38,
+    "winner": 1783
+  },
+  {
+    "id": 15,
+    "cid": 2013,
+    "name_en": "Campeonato Brasileiro Série A",
+    "name_vi": "Campeonato Brasileiro Série A",
+    "code_en": "Campeonato Brasileiro Série A 2018/2018",
+    "code_vi": "Campeonato Brasileiro Série A 2018/2018",
+    "startDate": "2018-04-14",
+    "endDate": "2018-12-02",
+    "currentMatchday": 38,
+    "winner": 1769
+  },
+  {
+    "id": 459,
+    "cid": 2013,
+    "name_en": "Campeonato Brasileiro Série A",
+    "name_vi": "Campeonato Brasileiro Série A",
+    "code_en": "Campeonato Brasileiro Série A 2017/2017",
+    "code_vi": "Campeonato Brasileiro Série A 2017/2017",
+    "startDate": "2017-05-13",
+    "endDate": "2017-12-03",
+    "currentMatchday": 0,
+    "winner": 1779
+  }
+]

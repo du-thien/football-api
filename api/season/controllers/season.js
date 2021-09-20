@@ -1,8 +1,54 @@
-'use strict';
+const fs = require("fs");
+const path = require("path");
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
- */
+module.exports = {
+  async sync(ctx) {
+    const file = path.join(__dirname, "../../data/seasons.json");
+    let rawdata = fs.readFileSync(file);
+    let data = JSON.parse(rawdata);
+    
+    const seasons = await Promise.all(
+      data.map(
+        async ({
+          id,
+          cid,
+          name_en,
+          name_vi,
+          code_en,
+          code_vi,
+          startDate,
+          endDate,
+          currentMatchday,
+          winner,
+        }) => {
+          const competition = await strapi.services.competition.findOne({
+            cid,
+          });
+          console.log(winner)
+          const team = await strapi.services.team.findOne({
+            tid: winner,
+          });
 
-module.exports = {};
+          return await strapi.services.season.create({
+            sid: id,
+            name_en,
+            name_vi,
+            code_en,
+            code_vi,
+            startDate,
+            endDate,
+            currentMatchday,
+            winner: team,
+            competition,
+          });
+        }
+      )
+    );
+
+    console.log(seasons);
+    ctx.send({
+      message: "sync seasons success",
+      status: 200,
+    });
+  },
+};

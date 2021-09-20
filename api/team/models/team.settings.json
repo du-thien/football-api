@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "teams",
   "info": {
-    "name": "team"
+    "name": "team",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "tid": {
-      "type": "integer"
+      "type": "integer",
+      "unique": true,
+      "private": true
     },
     "name": {
       "type": "string"
@@ -23,14 +26,23 @@
     "tla": {
       "type": "string"
     },
-    "img": {
+    "crestUrl": {
       "type": "string"
     },
     "venue": {
       "type": "string"
     },
-    "currentSeason": {
-      "model": "season"
+    "area": {
+      "model": "area"
+    },
+    "address": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "clubColors": {
+      "type": "string"
     }
   }
 }

@@ -6,11 +6,11 @@ const insertChildAreas = async (data, parentId) => {
     childAreas.map(async (area) => {
       const { id, name, countryCode, ensignUrl, parentAreaId, parentArea } =
         area;
-      let entity = await strapi.services.area.findOne({ areaId: id });
+      let entity = await strapi.services.area.findOne({ aid: id });
 
       if (!entity) {
         entity = await strapi.services.area.create({
-          areaId: id,
+          aid: id,
           name,
           countryCode,
           img: ensignUrl,
@@ -25,10 +25,10 @@ const insertChildAreas = async (data, parentId) => {
 
 const insertParentAreas = async (area, childAreas) => {
   const { id, name, countryCode, ensignUrl, parentAreaId, parentArea } = area;
-  let entity = await strapi.services.area.findOne({ areaId: area.id });
+  let entity = await strapi.services.area.findOne({ aid: area.id });
   if (!entity) {
     entity = await strapi.services.area.create({
-      areaId: id,
+      aid: id,
       name,
       countryCode,
       img: ensignUrl,
@@ -56,7 +56,7 @@ const insertManyAreas = async (data) => {
     );
 
     await strapi.services.area.create({
-      areaId: id,
+      aid: id,
       name,
       countryCode,
       img: ensignUrl,

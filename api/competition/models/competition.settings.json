@@ -35,14 +35,17 @@
     "img": {
       "type": "string"
     },
-    "plan": {
-      "type": "string"
-    },
     "currentSeason": {
       "model": "season"
     },
-    "seasons": {
-      "collection": "season"
+    "plan": {
+      "type": "enumeration",
+      "enum": [
+        "TIER_ONE",
+        "TIER_TWO",
+        "TIER_THREE",
+        "TIER_FOUR"
+      ]
     }
   }
 }

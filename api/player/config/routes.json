@@ -2,56 +2,56 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/matches",
-      "handler": "match.find",
+      "path": "/players",
+      "handler": "player.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/matches/sync-data",
-      "handler": "match.sync",
+      "path": "/players/sync-data",
+      "handler": "player.sync",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/matches/count",
-      "handler": "match.count",
+      "path": "/players/count",
+      "handler": "player.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/matches/:id",
-      "handler": "match.findOne",
+      "path": "/players/:id",
+      "handler": "player.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/matches",
-      "handler": "match.create",
+      "path": "/players",
+      "handler": "player.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/matches/:id",
-      "handler": "match.update",
+      "path": "/players/:id",
+      "handler": "player.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/matches/:id",
-      "handler": "match.delete",
+      "path": "/players/:id",
+      "handler": "player.delete",
       "config": {
         "policies": []
       }

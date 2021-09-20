@@ -24,7 +24,7 @@
     "img": {
       "type": "string"
     },
-    "areaId": {
+    "aid": {
       "type": "integer"
     },
     "name": {
