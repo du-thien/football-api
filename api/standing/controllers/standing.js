@@ -47,7 +47,7 @@ module.exports = {
               pointsHome: 0,
               homeMatches: [],
               awayMatches: [],
-              lastMatches: []
+              lastMatches: [],
             });
           })
         );
@@ -63,20 +63,15 @@ module.exports = {
 
   async updateScores(ctx) {
     try {
-      const file = path.join(__dirname, "../../data/matches.json");
-      let rawdata = fs.readFileSync(file);
-      let data = JSON.parse(rawdata);
+      const { cid, year } = ctx.query;
+      const res = await axios.get(
+        `${process.env.FB_URL}/competitions/${cid}/matches?seasons=${year}`,
+        {
+          headers: fbHeader,
+        }
+      );
 
-      //   const { cid, year } = ctx.query;
-      //   const res = await axios.get(
-      //     `${process.env.FB_URL}/competitions/${cid}/matches?seasons=${year}`,
-      //     {
-      //       headers: fbHeader,
-      //     }
-      //   );
-
-      //   const { matches } = res.data;
-      const matches = data;
+      const { matches } = res.data;
       if (matches.length > 0) {
         for (const match of matches) {
           const { season, homeTeam, awayTeam } = match;
@@ -122,14 +117,14 @@ module.exports = {
             arrHomeMatches.push({
               id,
               homeTeam,
-              awayTeam
+              awayTeam,
             });
 
             let lastHomeMatches = home.lastMatches ? home.lastMatches : [];
             lastHomeMatches.push({
               id,
               homeTeam,
-              awayTeam
+              awayTeam,
             });
 
             await strapi.services.standing.update(
@@ -154,10 +149,16 @@ module.exports = {
             );
 
             // Away
-            let pointsA = score.winner === 'AWAY_TEAM' ? away.points + 3 : score.winner === 'DRAW' ? away.points + 1 : away.points;
-            let wonA = score.winner === 'AWAY_TEAM' ? away.won + 1 : away.won;
-            let drawA = score.winner === 'DRAW' ? away.draw + 1 : away.draw;
-            let lostA = score.winner === 'HOME_TEAM' ? away.lost + 1 : away.lost;
+            let pointsA =
+              score.winner === "AWAY_TEAM"
+                ? away.points + 3
+                : score.winner === "DRAW"
+                ? away.points + 1
+                : away.points;
+            let wonA = score.winner === "AWAY_TEAM" ? away.won + 1 : away.won;
+            let drawA = score.winner === "DRAW" ? away.draw + 1 : away.draw;
+            let lostA =
+              score.winner === "HOME_TEAM" ? away.lost + 1 : away.lost;
             let playedGamesA = away.playedGames + 1;
 
             let goalsForA = score.fullTime.awayTeam + away.goalsFor;
@@ -165,20 +166,25 @@ module.exports = {
             let goalDifferenceA = goalsForA - goalsAgainstA;
 
             let goalsForAway = score.fullTime.awayTeam + away.goalsForAway;
-            let pointsAway = score.winner === 'AWAY_TEAM' ? away.pointsAway + 3 : score.winner === 'DRAW' ? away.pointsAway + 1 : away.pointsAway;
+            let pointsAway =
+              score.winner === "AWAY_TEAM"
+                ? away.pointsAway + 3
+                : score.winner === "DRAW"
+                ? away.pointsAway + 1
+                : away.pointsAway;
 
-            let arrAwaysMatches = (away.homeMatches) ? away.homeMatches : [];
+            let arrAwaysMatches = away.homeMatches ? away.homeMatches : [];
             arrAwaysMatches.push({
               id,
               homeTeam,
-              awayTeam
+              awayTeam,
             });
 
-            let lastAwaysMatches = (away.lastMatches) ? away.lastMatches : [];
+            let lastAwaysMatches = away.lastMatches ? away.lastMatches : [];
             lastAwaysMatches.push({
               id,
               homeTeam,
-              awayTeam
+              awayTeam,
             });
 
             await strapi.services.standing.update(
