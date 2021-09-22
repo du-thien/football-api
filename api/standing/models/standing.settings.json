@@ -84,6 +84,9 @@
     },
     "awayMatches": {
       "type": "json"
+    },
+    "year": {
+      "type": "biginteger"
     }
   }
 }

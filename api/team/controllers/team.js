@@ -1,28 +1,40 @@
-const fs = require("fs");
-const path = require("path");
+const axios = require("../../plugins/axios");
+const { fbHeader } = require("../../constants/headers");
 
 module.exports = {
   async sync(ctx) {
-    const file = path.join(__dirname, "../../data/teams.json");
-    let rawdata = fs.readFileSync(file);
-    let data = JSON.parse(rawdata);
-
-    const teams = await Promise.all(
-      data.map(
-        async ({
+    try {
+      const { cid, year } = ctx.query;
+      const res = await axios.get(
+        `${process.env.FB_URL}/competitions/${cid}/teams?season=${year}`,
+        {
+          headers: fbHeader,
+        }
+      );
+      const { teams } = res.data;
+      let count = 0;
+      let length = teams.length;
+      for (const team of teams) {
+        const {
           id,
+          area,
           name,
           shortName,
           tla,
+          website,
           venue,
           address,
           clubColors,
-          img,
-          website,
-          arid,
-        }) => {
-          const area = await strapi.services.area.findOne({ aid: arid });
-          return await strapi.services.team.create({
+          crestUrl,
+        } = team;
+
+        let teamExisted = await strapi.services.team.findOne({
+          tid: id,
+        });
+
+        const areaExisted = await strapi.services.area.findOne({ aid: area.id });
+        if (!teamExisted) {
+          await strapi.services.team.create({
             tid: id,
             website,
             name,
@@ -31,17 +43,22 @@ module.exports = {
             venue,
             address,
             clubColors,
-            crestUrl: img,
-            area,
+            crestUrl,
+            area: areaExisted,
           });
+          count++;
+          console.log(`created (${count}/${length}) - team id: ${id}`);
+        } else {
+          length--;
         }
-      )
-    );
+      }
 
-    console.log(teams);
-    ctx.send({
-      message: "sync teams success",
-      status: 200,
-    });
+      ctx.send({
+        message: "sync teams success",
+        status: 200,
+      });
+    } catch (error) {
+      console.error(error);
+    }
   },
 };

@@ -10,14 +10,6 @@
     },
     {
       "method": "GET",
-      "path": "/matches/sync-data",
-      "handler": "match.sync",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
       "path": "/matches/count",
       "handler": "match.count",
       "config": {

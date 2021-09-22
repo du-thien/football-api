@@ -1,5 +1,6 @@
 const axios = require("../../plugins/axios");
 const { fbHeader } = require("../../constants/headers");
+const moment = require("moment");
 
 module.exports = {
   async sync(ctx) {
@@ -15,18 +16,19 @@ module.exports = {
       const comp = await strapi.services.competition.findOne({
         cid: competition.id,
       });
-
-      if (teams.length > 0) {
-        await Promise.all(
-          teams.map(async (team) => {
-            const existStanding = await strapi.services.standing.findOne({
+      let count = 0;
+      const length = teams.length;
+      if (length > 0) {
+        for (const team of teams) {
+          let standing = await strapi.services.standing.findOne({
+            sid: season.id,
+            tid: team.id,
+          });
+          if (!standing) {
+            standing = await strapi.services.standing.create({
               sid: season.id,
               tid: team.id,
-            });
-            if (existStanding) return existStanding;
-            await strapi.services.standing.create({
-              sid: season.id,
-              tid: team.id,
+              year,
               name: team.name,
               competition: comp,
               position: 0,
@@ -46,8 +48,12 @@ module.exports = {
               awayMatches: [],
               lastMatches: [],
             });
-          })
-        );
+          }
+          count++;
+          console.log(
+            `get (${count}/${length}) - teams id: ${team.id} - standing id: ${standing.id}`
+          );
+        }
       }
       ctx.send({
         message: "sync standing success",
@@ -67,28 +73,29 @@ module.exports = {
           headers: fbHeader,
         }
       );
-      const { matches } = res.data;
       let count = 0;
-      const length = matches.length
-      if (length > 0) {
+      const matches = await getMatches(res.data.matches);
+      if (matches.length > 0) {
         for (const match of matches) {
-          const { season, homeTeam, awayTeam } = match;
+          const { homeTeam, awayTeam, sid } = match;
 
           let home = await strapi.services.standing.findOne({
-            tid: homeTeam.id,
-            sid: season.id,
+            tid: homeTeam.tid,
+            sid,
           });
 
           let away = await strapi.services.standing.findOne({
-            tid: awayTeam.id,
-            sid: season.id,
+            tid: awayTeam.tid,
+            sid,
           });
 
           if (home && away) {
             await getTeamScores(true, home, match);
             await getTeamScores(false, away, match);
             count++;
-            console.log(`updated (${count}/${length}) - match id: ${match.id}`)
+            console.log(
+              `updated (${count}/${matches.length}) - match id: ${match.id}`
+            );
           }
         }
       }
@@ -102,9 +109,64 @@ module.exports = {
   },
 };
 
+const getMatches = async (matches) => {
+  try {
+    let data = [];
+    for (const match of matches) {
+      const {
+        id,
+        season,
+        utcDate,
+        status,
+        matchday,
+        score,
+        homeTeam,
+        awayTeam,
+        referees,
+      } = match;
+
+      let matchExisted = await strapi.services.match.findOne({
+        mid: id,
+        sid: season.id,
+      });
+
+      if (!matchExisted) {
+        let home = await strapi.services.team.findOne({
+          tid: homeTeam.id,
+        });
+
+        let away = await strapi.services.team.findOne({
+          tid: awayTeam.id,
+        });
+        if (home && away) {
+          matchExisted = await strapi.services.match.create({
+            mid: id,
+            sid: season.id,
+            utcDate: moment(utcDate).format("YYYY-MM-DD HH:mm:ss"),
+            status,
+            matchday,
+            odds: [],
+            score,
+            homeTeam: home,
+            awayTeam: away,
+            referees,
+          });
+          console.log(`create match - id: ${match.id}`);
+          data.push(matchExisted);
+        } else {
+          throw(home);
+        }
+      }
+    }
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 const getTeamScores = async (isHome, team, match) => {
   try {
-    const { score, id, homeTeam, awayTeam, season } = match;
+    const { score, mid, homeTeam, awayTeam, sid } = match;
     const win = isHome ? "HOME_TEAM" : "AWAY_TEAM";
     const lose = isHome ? "AWAY_TEAM" : "HOME_TEAM";
     let pointsTeam =
@@ -132,7 +194,7 @@ const getTeamScores = async (isHome, team, match) => {
 
     let lastTeamMatches = team.lastMatches ? team.lastMatches : [];
     lastTeamMatches.push({
-      id,
+      mid,
       homeTeam,
       awayTeam,
     });
@@ -148,15 +210,15 @@ const getTeamScores = async (isHome, team, match) => {
 
       let arrHomeMatches = team.homeMatches ? team.homeMatches : [];
       arrHomeMatches.push({
-        id,
+        mid,
         homeTeam,
         awayTeam,
       });
 
       await strapi.services.standing.update(
         {
-          tid: homeTeam.id,
-          sid: season.id,
+          tid: homeTeam.tid,
+          sid,
         },
         {
           playedGames: playedGamesTeam,
@@ -184,15 +246,15 @@ const getTeamScores = async (isHome, team, match) => {
 
       let arrAwayMatches = team.awayMatches ? team.awayMatches : [];
       arrAwayMatches.push({
-        id,
+        mid,
         homeTeam,
         awayTeam,
       });
 
       await strapi.services.standing.update(
         {
-          tid: awayTeam.id,
-          sid: season.id,
+          tid: awayTeam.tid,
+          sid,
         },
         {
           playedGames: playedGamesTeam,
