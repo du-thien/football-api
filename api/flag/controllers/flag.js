@@ -3,39 +3,37 @@ const axios = require("../../plugins/axios");
 const { downloadImage } = require("../../utils/downloadImage");
 const cheerio = require("cheerio");
 
-module.exports = {
-  async download(ctx) {
-    await axios
-      .get(`${process.env.BONGDA_URL}/bang-xep-hang-bong-da.html`, {
-        headers: bongdaHeader,
-      })
-      .then(async (res) => {
-        if (res.status === 200) {
-          const $ = cheerio.load(res.data);
-          const colNews = $(".New_col-centre");
-          let leagues = [];
-          colNews.find(".danh_sach_bxh").each((i, el) => {
-            const url = $(el).find("a").attr("href");
-            const name = $(el).find("a").text().trim();
-            console.log(`[GET LEAGUE URL]: ${url}`);
-            leagues.push({
-              name: name,
-              url: url,
-            });
+const download = async (ctx) => {
+  await axios
+    .get(`${process.env.BONGDA_URL}/bang-xep-hang-bong-da.html`, {
+      headers: bongdaHeader,
+    })
+    .then(async (res) => {
+      if (res.status === 200) {
+        const $ = cheerio.load(res.data);
+        const colNews = $(".New_col-centre");
+        let leagues = [];
+        colNews.find(".danh_sach_bxh").each((i, el) => {
+          const url = $(el).find("a").attr("href");
+          const name = $(el).find("a").text().trim();
+          console.log(`[GET LEAGUE URL]: ${url}`);
+          leagues.push({
+            name: name,
+            url: url,
           });
-          const teams = await getLinksTeam(leagues);
-          const imageTeams = await getImagesTeam(teams);
-          const response = await downloadFlags(imageTeams);
-          if (response.status === 200) {
-            console.log("[DOWNLOAD IMAGE COMPLETED]");
-          }
-          ctx.send({
-            message: response.message,
-          });
+        });
+        const teams = await getLinksTeam(leagues);
+        const imageTeams = await getImagesTeam(teams);
+        const response = await downloadFlags(imageTeams);
+        if (response.status === 200) {
+          console.log("[DOWNLOAD IMAGE COMPLETED]");
         }
-      })
-      .catch((err) => console.error(err.message));
-  },
+        ctx.send({
+          message: response.message,
+        });
+      }
+    })
+    .catch((err) => console.error(err.message));
 };
 
 const getLinksTeam = async (leagues) => {
@@ -137,4 +135,8 @@ const downloadFlags = async (imageTeams) => {
       message: `download failed: ${error.message}`,
     };
   }
+};
+
+module.exports = {
+  download,
 };

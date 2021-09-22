@@ -2,111 +2,130 @@ const axios = require("../../plugins/axios");
 const { fbHeader } = require("../../constants/headers");
 const moment = require("moment");
 
-module.exports = {
-  async sync(ctx) {
-    try {
-      const { cid, year } = ctx.query;
-      const res = await axios.get(
-        `${process.env.FB_URL}/competitions/${cid}/teams?season=${year}`,
-        {
-          headers: fbHeader,
-        }
-      );
-      const { teams, season, competition } = res.data;
-      const comp = await strapi.services.competition.findOne({
-        cid: competition.id,
+const sync = async (ctx) => {
+  try {
+    const { cid, year } = ctx.query;
+    if (!year) {
+      const currentSeason = await strapi.services.competition.findOne({ cid });
+      year = new Date(currentSeason.startDate).getFullYear();
+    }
+    if (!cid) {
+      return ctx.send({
+        message: "missing cid field",
+        status: 422,
       });
-      let count = 0;
-      const length = teams.length;
-      if (length > 0) {
-        for (const team of teams) {
-          let standing = await strapi.services.standing.findOne({
+    }
+    const res = await axios.get(
+      `${process.env.FB_URL}/competitions/${cid}/teams?season=${year}`,
+      {
+        headers: fbHeader,
+      }
+    );
+    const { teams, season, competition } = res.data;
+    const comp = await strapi.services.competition.findOne({
+      cid: competition.id,
+    });
+    let count = 0;
+    const length = teams.length;
+    if (length > 0) {
+      for (const team of teams) {
+        let standing = await strapi.services.standing.findOne({
+          sid: season.id,
+          tid: team.id,
+        });
+        if (!standing) {
+          standing = await strapi.services.standing.create({
             sid: season.id,
             tid: team.id,
+            year,
+            name: team.name,
+            competition: comp,
+            position: 0,
+            playedGames: 0,
+            won: 0,
+            draw: 0,
+            lost: 0,
+            points: 0,
+            goalsFor: 0,
+            goalsAgainst: 0,
+            goalDifference: 0,
+            goalsForAway: 0,
+            goalsForHome: 0,
+            pointsAway: 0,
+            pointsHome: 0,
+            homeMatches: [],
+            awayMatches: [],
+            lastMatches: [],
           });
-          if (!standing) {
-            standing = await strapi.services.standing.create({
-              sid: season.id,
-              tid: team.id,
-              year,
-              name: team.name,
-              competition: comp,
-              position: 0,
-              playedGames: 0,
-              won: 0,
-              draw: 0,
-              lost: 0,
-              points: 0,
-              goalsFor: 0,
-              goalsAgainst: 0,
-              goalDifference: 0,
-              goalsForAway: 0,
-              goalsForHome: 0,
-              pointsAway: 0,
-              pointsHome: 0,
-              homeMatches: [],
-              awayMatches: [],
-              lastMatches: [],
-            });
-          }
+        }
+        count++;
+        console.log(
+          `get (${count}/${length}) - teams id: ${team.id} - standing id: ${standing.id}`
+        );
+      }
+    }
+    ctx.send({
+      message: "sync standing success",
+      status: 200,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const updateScores = async (ctx) => {
+  try {
+    let { cid, year } = ctx.query;
+    if (!year) {
+      const currentSeason = await strapi.services.competition.findOne({ cid });
+      year = new Date(currentSeason.startDate).getFullYear();
+    }
+    if (!cid) {
+      return ctx.send({
+        message: "missing cid field",
+        status: 422,
+      });
+    }
+
+    const res = await axios.get(
+      `${process.env.FB_URL}/competitions/${cid}/matches?season=${year}`,
+      {
+        headers: fbHeader,
+      }
+    );
+    let count = 0;
+    const matches = await getMatches(res.data.matches);
+    if (matches.length > 0) {
+      for (const match of matches) {
+        const { homeTeam, awayTeam, sid } = match;
+
+        let home = await strapi.services.standing.findOne({
+          tid: homeTeam.tid,
+          sid,
+        });
+
+        let away = await strapi.services.standing.findOne({
+          tid: awayTeam.tid,
+          sid,
+        });
+
+        if (home && away) {
+          await getTeamScores(true, home, match);
+          await getTeamScores(false, away, match);
           count++;
           console.log(
-            `get (${count}/${length}) - teams id: ${team.id} - standing id: ${standing.id}`
+            `updated (${count}/${matches.length}) - match id: ${match.id}`
           );
         }
       }
-      ctx.send({
-        message: "sync standing success",
-        status: 200,
-      });
-    } catch (error) {
-      console.error(error);
     }
-  },
-
-  async updateScores(ctx) {
-    try {
-      const { cid, year } = ctx.query;
-      const res = await axios.get(
-        `${process.env.FB_URL}/competitions/${cid}/matches?season=${year}&status=FINISHED`,
-        {
-          headers: fbHeader,
-        }
-      );
-      let count = 0;
-      const matches = await getMatches(res.data.matches);
-      if (matches.length > 0) {
-        for (const match of matches) {
-          const { homeTeam, awayTeam, sid } = match;
-
-          let home = await strapi.services.standing.findOne({
-            tid: homeTeam.tid,
-            sid,
-          });
-
-          let away = await strapi.services.standing.findOne({
-            tid: awayTeam.tid,
-            sid,
-          });
-
-          if (home && away) {
-            await getTeamScores(true, home, match);
-            await getTeamScores(false, away, match);
-            count++;
-            console.log(
-              `updated (${count}/${matches.length}) - match id: ${match.id}`
-            );
-          }
-        }
-      }
-      ctx.send({
-        message: "update standing scores success",
-        status: 200,
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  },
+    ctx.send({
+      message: "update standing scores success",
+      status: 200,
+    });
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 const getMatches = async (matches) => {
@@ -128,6 +147,7 @@ const getMatches = async (matches) => {
       let matchExisted = await strapi.services.match.findOne({
         mid: id,
         sid: season.id,
+        status: "FINISHED",
       });
 
       if (!matchExisted) {
@@ -154,7 +174,7 @@ const getMatches = async (matches) => {
           console.log(`create match - id: ${match.id}`);
           data.push(matchExisted);
         } else {
-          throw(home);
+          throw home;
         }
       }
     }
@@ -275,4 +295,9 @@ const getTeamScores = async (isHome, team, match) => {
   } catch (error) {
     console.error(error);
   }
+};
+
+module.exports = {
+  sync,
+  updateScores,
 };
