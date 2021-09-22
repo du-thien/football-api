@@ -50,10 +50,10 @@
       "type": "json"
     },
     "homeTeam": {
-      "model": "team"
+      "type": "json"
     },
     "awayTeam": {
-      "model": "team"
+      "type": "json"
     }
   }
 }

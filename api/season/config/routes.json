@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/seasons/update-data",
+      "handler": "season.updateNextMatches",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/seasons/count",
       "handler": "season.count",
       "config": {

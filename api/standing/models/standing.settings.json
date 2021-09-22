@@ -87,6 +87,15 @@
     },
     "year": {
       "type": "biginteger"
+    },
+    "nextMatches": {
+      "type": "json"
+    },
+    "winHome": {
+      "type": "integer"
+    },
+    "winAway": {
+      "type": "integer"
     }
   }
 }

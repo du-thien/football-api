@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/standings/update-data",
-      "handler": "standing.updateScores",
+      "handler": "standing.updateStandingScores",
       "config": {
         "policies": []
       }
