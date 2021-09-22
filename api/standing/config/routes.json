@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/standings/getStanding",
+      "handler": "standing.getStanding",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/standings/update-data",
       "handler": "standing.updateScores",
       "config": {

@@ -151,13 +151,7 @@ const getMatches = async (matches) => {
       });
 
       if (!matchExisted) {
-        let home = await strapi.services.team.findOne({
-          tid: homeTeam.id,
-        });
-
-        let away = await strapi.services.team.findOne({
-          tid: awayTeam.id,
-        });
+ 
         if (home && away) {
           matchExisted = await strapi.services.match.create({
             mid: id,
@@ -167,8 +161,8 @@ const getMatches = async (matches) => {
             matchday,
             odds: [],
             score,
-            homeTeam: home,
-            awayTeam: away,
+            homeTeam,
+            awayTeam,
             referees,
           });
           console.log(`create match - id: ${match.id}`);
@@ -235,7 +229,7 @@ const getTeamScores = async (isHome, team, match) => {
         awayTeam,
       });
 
-      await strapi.services.standing.update(
+       strapi.services.standing.update(
         {
           tid: homeTeam.tid,
           sid,
@@ -271,7 +265,7 @@ const getTeamScores = async (isHome, team, match) => {
         awayTeam,
       });
 
-      await strapi.services.standing.update(
+       strapi.services.standing.update(
         {
           tid: awayTeam.tid,
           sid,
@@ -297,7 +291,239 @@ const getTeamScores = async (isHome, team, match) => {
   }
 };
 
+const getStanding = async (ctx) => {
+  let { cid, year } = ctx.query;
+  if (!year) {
+    const currentSeason = await strapi.services.competition.findOne({ cid: cid });
+    year = new Date(currentSeason.startDate).getFullYear();
+  }
+  if (!cid) {
+    return ctx.send({
+      message: "missing cid field",
+      status: 422,
+    });
+  }
+  const res = await axios.get(
+    `${process.env.FB_URL}/competitions/${cid}/matches?season=${year}`,
+    {
+      headers: fbHeader,
+    }
+  );
+  const {matches} = res.data;
+  if (matches.length < 0) {
+    return;
+  }
+
+  // await refreshStandings(sid);
+  let arrMatch = [];
+  let totalMatchs = 0;
+  let matchDraw = 0;
+  let pastMatches = 0;
+  for (const v of matches) {
+    let utcDate = moment(v.utcDate).format("YYYY-MM-DD HH:mm:ss");
+    let queryMatch = { mid: v.id };
+    let match = await strapi.services.match.findOne(queryMatch);
+    if (match) {
+      strapi.services.match.update(queryMatch, {
+        status: v.status,
+        matchday: v.matchday,
+        odds: [],
+        group: v.group,
+        score: v.score, //arr
+        homeTeam: v.homeTeam, //arr
+        awayTeam: v.awayTeam, //arr
+        referees: v.referees, //arr
+      });
+    } else {
+      arrMatch.push({
+        mid: v.id,
+        sid: v.season.id,
+        utcDate: utcDate,
+        status: v.status,
+        matchday: v.matchday,
+        odds: [],
+        group: v.group,
+        score: v.score,
+        homeTeam: v.homeTeam,
+        awayTeam: v.awayTeam,
+        referees: v.referees,
+      });
+    }
+
+    // Handle standing homeTeam
+    let queryH = {
+      sid: v.season.id,
+      tid: v.homeTeam.id,
+    };
+
+    let teamH = await strapi.services.standing.findOne(queryH);
+
+    let queryA = {
+      sid: v.season.id,
+      tid: v.awayTeam.id,
+    };
+
+    let teamA = await strapi.services.standing.findOne(queryA);
+    if (teamH && teamA) {
+      continue;
+    }
+
+    let goalsHT = v.score.fullTime.homeTeam;
+    let goalsAT = v.score.fullTime.awayTeam;
+    let arrHistoryMatch = {
+      id: v.id,
+      homeTeam: v.homeTeam,
+      awayTeam: v.awayTeam,
+      goalsHT,
+      goalsAT,
+    };
+
+    // Data Season
+    pastMatches = v.score.winner ? pastMatches + 1 : pastMatches;
+    matchDraw = v.score.winner === "DRAW" ? matchDraw + 1 : matchDraw;
+    totalMatchs += 1;
+
+    // Home
+    let pointsH =
+      v.score.winner === "HOME_TEAM"
+        ? teamH.points + 3
+        : v.score.winner === "DRAW"
+        ? teamH.points + 1
+        : teamH.points;
+    let wonH = v.score.winner === "HOME_TEAM" ? teamH.won + 1 : teamH.won;
+    let drawH = v.score.winner === "DRAW" ? teamH.draw + 1 : teamH.draw;
+    let lostH = v.score.winner === "AWAY_TEAM" ? teamH.lost + 1 : teamH.lost;
+    let playedGamesH = v.score.winner
+      ? teamH.playedGames + 1
+      : teamH.playedGames;
+    let winHome =
+      v.score.winner === "HOME_TEAM" ? teamH.winHome + 1 : teamH.winHome;
+
+    let goalsForH = goalsHT + teamH.goalsFor;
+    let goalsAgainstH = goalsAT + teamH.goalsAgainst;
+    let goalDifferenceH = goalsForH - goalsAgainstH;
+
+    let goalsForHome = goalsHT + teamH.goalsForHome;
+    let pointsHome =
+      v.score.winner === "HOME_TEAM"
+        ? teamH.pointsHome + 3
+        : v.score.winner === "DRAW"
+        ? teamH.pointsHome + 1
+        : teamH.pointsHome;
+
+    let arrHM = teamH.homeMatchs ? teamH.homeMatchs : [];
+    arrHM.push({
+      arrHistoryMatch,
+    });
+
+    let arrLastMH = teamH.lastMatchs ? teamH.lastMatchs : [];
+    let arrNextMH = teamH.nextMatchs ? teamH.nextMatchs : [];
+    if (v.score.winner) {
+      arrLastMH.push(arrHistoryMatch);
+    } else {
+      arrNextMH.push(arrHistoryMatch);
+    }
+
+    // Away
+    let pointsA =
+      v.score.winner === "AWAY_TEAM"
+        ? teamA.points + 3
+        : v.score.winner === "DRAW"
+        ? teamA.points + 1
+        : teamA.points;
+    let wonA = v.score.winner === "AWAY_TEAM" ? teamA.won + 1 : teamA.won;
+    let drawA = v.score.winner === "DRAW" ? teamA.draw + 1 : teamA.draw;
+    let lostA = v.score.winner === "HOME_TEAM" ? teamA.lost + 1 : teamA.lost;
+    let playedGamesA = v.score.winner
+      ? teamA.playedGames + 1
+      : teamA.playedGames;
+    let winAway =
+      v.score.winner === "AWAY_TEAM" ? teamA.winAway + 1 : teamA.winAway;
+
+    let goalsForA = goalsAT + teamA.goalsFor;
+    let goalsAgainstA = goalsHT + teamA.goalsAgainst;
+    let goalDifferenceA = goalsForA - goalsAgainstA;
+
+    let goalsForAway = goalsAT + teamA.goalsForAway;
+    let pointsAway =
+      v.score.winner === "AWAY_TEAM"
+        ? teamA.pointsAway + 3
+        : v.score.winner === "DRAW"
+        ? teamA.pointsAway + 1
+        : teamA.pointsAway;
+
+    let arrAM = teamA.awayMatchs ? teamA.awayMatchs : [];
+    arrAM.push(arrHistoryMatch);
+
+    let arrLastMA = teamA.lastMatchs ? teamA.lastMatchs : [];
+    let arrNextMA = teamA.nextMatchs ? teamA.nextMatchs : [];
+    if (v.score.winner) {
+      arrLastMA.push(arrHistoryMatch);
+    } else {
+      arrNextMA.push(arrHistoryMatch);
+    }
+
+     strapi.services.standing.update(queryH, {
+      playedGames: playedGamesH,
+      won: wonH,
+      draw: drawH,
+      lost: lostH,
+      points: pointsH,
+      goalsFor: goalsForH,
+      goalsAgainst: goalsAgainstH,
+      goalDifference: goalDifferenceH,
+      goalsForHome: goalsForHome,
+      pointsHome: pointsHome,
+      winHome: winHome,
+      homeMatchs: arrHM,
+      lastMatchs: arrLastMH,
+      nextMatchs: arrNextMH,
+    });
+     strapi.services.standing.update(queryA, {
+      playedGames: playedGamesA,
+      won: wonA,
+      draw: drawA,
+      lost: lostA,
+      points: pointsA,
+      goalsFor: goalsForA,
+      goalsAgainst: goalsAgainstA,
+      goalDifference: goalDifferenceA,
+      goalsForAway: goalsForAway,
+      pointsAway: pointsAway,
+      winAway: winAway,
+      awayMatchs: arrAM,
+      lastMatchs: arrLastMA,
+      nextMatchs: arrNextMA,
+    });
+  }
+
+  // let data_update_season = {
+  //   $set: {
+  //     totalMatchs,
+  //     matchDraw,
+  //     pastMatches,
+  //   },
+  // };
+
+  // upseartSeason(data_update_season, { id: sid });
+
+  if (arrMatch.length > 0) {
+    for(const m of arrMatch) {
+       strapi.services.match.create(m);
+    }
+  }
+
+  ctx.send({
+    message: "ok"
+  })
+};
+
+const refreshStandings = async (sid) => {
+  
+};
+
 module.exports = {
   sync,
   updateScores,
+  getStanding
 };

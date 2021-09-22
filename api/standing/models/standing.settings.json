@@ -87,6 +87,9 @@
     },
     "year": {
       "type": "biginteger"
+    },
+    "nextMatchs": {
+      "type": "json"
     }
   }
 }
