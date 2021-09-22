@@ -173,8 +173,6 @@ const getMatches = async (matches) => {
           });
           console.log(`create match - id: ${match.id}`);
           data.push(matchExisted);
-        } else {
-          throw home;
         }
       }
     }
@@ -235,7 +233,7 @@ const getTeamScores = async (isHome, team, match) => {
         awayTeam,
       });
 
-      await strapi.services.standing.update(
+      strapi.services.standing.update(
         {
           tid: homeTeam.tid,
           sid,
@@ -271,7 +269,7 @@ const getTeamScores = async (isHome, team, match) => {
         awayTeam,
       });
 
-      await strapi.services.standing.update(
+      strapi.services.standing.update(
         {
           tid: awayTeam.tid,
           sid,
