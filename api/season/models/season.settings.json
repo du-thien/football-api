@@ -43,6 +43,9 @@
     },
     "winner": {
       "model": "team"
+    },
+    "nextMatches": {
+      "type": "json"
     }
   }
 }

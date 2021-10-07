@@ -5,7 +5,7 @@ const sync = async (ctx) => {
   const file = path.join(__dirname, "../../data/seasons.json");
   let rawdata = fs.readFileSync(file);
   let data = JSON.parse(rawdata);
-  
+
   const seasons = await Promise.all(
     data.map(
       async ({
@@ -23,7 +23,7 @@ const sync = async (ctx) => {
         const competition = await strapi.services.competition.findOne({
           cid,
         });
-        console.log(winner)
+        console.log(winner);
         const team = await strapi.services.team.findOne({
           tid: winner,
         });
@@ -50,6 +50,16 @@ const sync = async (ctx) => {
     status: 200,
   });
 };
+
+const updateNextMatches = async (ctx) => {
+  const seasons = await strapi.services.season.find({});
+  console.log(seasons);
+  for (const s of seasons) {
+    await strapi.services.season.update({ sid: s.sid }, { nextMatches: [] });
+  }
+};
+
 module.exports = {
-  sync
+  sync,
+  updateNextMatches,
 };
